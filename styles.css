@@ -1,0 +1,235 @@
+/*Caleb Lyons - 2/27*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20;
+  font-size: 0.5rem;
+}
+
+body {
+    margin: calc(100dvh + 128px) 4vw 50dvh 4vw;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+
+}
+h2 {
+    font-family: sans-serif;
+    padding-bottom: 1.5rem;
+}
+p {
+    font-family: sans-serif;
+    max-width: 650px;
+    width: auto;
+    line-height: 1.65rem;
+}
+
+img {
+    object-fit: cover;
+    max-inline-size: 100%;
+    max-width: 100%;
+    border-radius: 7.5px;
+    padding: 5px;
+}
+
+div {
+    flex-direction: column;
+    max-width: 750px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 128px;
+    div {
+    padding: 0;
+    margin: 0;
+    }
+}
+
+.fullheight {
+    height: 100%;
+}
+
+.collumn {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.button, button {
+    font-size: 12pt;
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    width: fit-content;
+    max-inline-size: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: rgb(211, 211, 211);
+}
+
+li {
+    line-height: 1.65rem;
+    .button, button {
+        height: 35px;
+        width: 100%
+    }
+}
+
+.button:hover, button:hover {
+    background-color: rgba(255, 255, 255, 0.137);
+    color: white;
+}
+
+.button:hover, button:hover {
+    background-color: rgba(255, 255, 255, 0.137);
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 2vw 4vw;
+    color: white;
+    div {
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.127);
+        background-color: rgba(0, 0, 0, 0.616);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; 
+        :first-child {
+            margin-right: auto;
+            color: white;
+        }
+        span {
+            padding: 0;
+            a {
+                padding-right: 7.5px;
+                border-radius: 5px 0 0 5px;
+            }
+            button {
+                padding-left: 0px;
+                border-radius: 0 5px 5px 0;
+            }
+            a:hover, button:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+            }
+        }
+        > span:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white
+        }
+    }
+    .nav {
+        anchor-name: --nav;
+    }
+    .downloads {
+        anchor-name: --downloads;
+    }
+    .contacts {
+        anchor-name: --contacts;  
+    }
+    .exports {
+        anchor-name: --exports;  
+    }
+    }
+
+.menu {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.127);
+    background-color:  rgba(0, 0, 0, 0.616);
+    backdrop-filter: blur(10px);
+    border-width: 0;
+    .button, button {
+        width: 100%;
+        max-inline-size: 100%;
+        max-width: 100%;
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 5px 10px;
+        cursor: pointer;
+        color: rgb(211, 211, 211);
+    }
+    .button:hover, button:hover {
+            background-color: rgba(255, 255, 255, 0.137);
+            color: white;
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 20
+        }
+    
+    }
+
+#nav {
+    position: fixed;
+    position-anchor: --nav;
+    position-area: bottom span-right;
+    margin: initial;
+}
+
+#downloads {
+    position: fixed;
+    position-anchor: --downloads;
+    position-area: bottom span-left;
+    margin: initial;
+}
+#contacts {
+    position: fixed;
+    position-anchor: --contacts; 
+    position-area: bottom span-left;
+}
+
+#exports {
+    position: fixed;
+    position-anchor: exports; 
+    top: anchor(top);
+    left: anchor(right);
+    margin: initial;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+      display: none;  
+    }
+}
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    padding: 0;
+    z-index: -1;
+}
