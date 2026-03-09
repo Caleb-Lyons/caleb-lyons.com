@@ -7,7 +7,7 @@
 }
 
 body {
-    margin: calc(100dvh + 128px) 4vw 50dvh 4vw;
+    margin: calc(100dvh + 8rem) 4vw 50dvh 4vw;
     min-height: 100vh;
     font-family: sans-serif;
 }
@@ -37,16 +37,16 @@ p {
 
 img {
     object-fit: cover;
-    border-radius: 7.5px;
-    padding: 5px;
+    border-radius: 0.5rem;
+    padding: 0.313rem;
     max-inline-size: 100%;
 }
 
 main > div {
-    max-width: 750px;
+    max-width: 46.875rem;
     margin: auto;
     width: 100%;
-    margin-bottom: 128px;
+    margin-bottom: 8rem;
     > div {
         width: 100%;
         padding: 0;
@@ -60,17 +60,17 @@ main > div {
 }
 
 .button, button {
-    font-size: 12pt;
+    font-size: 1rem;
     font-weight: normal;
     text-decoration: none;
     color: black;
-    height: 50px;
+    height: 3.125rem;
     width: fit-content;
     max-inline-size: 100%;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    padding: 0 25px;
+    padding: 0 1.563rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@ main > div {
 li {
     line-height: 1.65rem;
     .button, button {
-        height: 35px;
+        height: 2.188rem;
         width: 100%
     }
 }
@@ -104,11 +104,11 @@ li {
     padding: 2vw 4vw;
     color: white;
     div {
-        padding: 5px;
-        border-radius: 10px;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.127);
+        padding: 0.313rem;
+        border-radius: 0.625rem;
+        box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.127);
         background-color: rgba(0, 0, 0, 0.616);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(0.625rem);
         width: 100%;
         max-width: 100%;
         display: flex;
@@ -123,13 +123,13 @@ li {
             padding: 0;
             margin: 0;
             a {
-                padding-right: 3px;
-                border-radius: 5px 0 0 5px;
+                padding-right: 0.313rem;
+                border-radius: 0.313rem 0 0 0.313rem;
             }
             button {
-                padding-right: 15px;
-                padding-left: 3px;
-                border-radius: 0 5px 5px 0;
+                padding-right: 0.938rem;
+                padding-left: 0.188rem;
+                border-radius: 0 0.313rem 0.313rem 0;
             }
             a:hover, button:hover {
                 background-color: rgba(255, 255, 255, 0.1);
@@ -158,21 +158,21 @@ li {
 .menu {
     width: fit-content;
     height: fit-content;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.127);
+    padding: 0.313rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.127);
     background-color:  rgba(0, 0, 0, 0.616);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.625rem);
     border-width: 0;
     overflow: hidden;
     .button, button {
         width: 100%;
         max-inline-size: 100%;
         max-width: 100%;
-        border-radius: 5px;
+        border-radius: 0.313rem;
         border: none;
         background-color: rgba(255, 255, 255, 0);
-        padding: 5px 10px;
+        padding: 0.313rem 0.625rem;
         cursor: pointer;
         color: rgb(211, 211, 211);
     }
@@ -194,7 +194,7 @@ li {
     position-area: bottom span-right;
     min-width: max-content;
     margin: initial;
-    transform: translate(-35px, 10px);
+    transform: translate(-2.188rem, 0.625rem);
 }
 
 #downloads {
@@ -203,14 +203,14 @@ li {
     position-area: bottom span-right;
     min-width: max-content;
     margin: initial;
-    transform: translate(-30px, 10px);
+    transform: translate(-1.875rem, 0.625rem);
 }
 #contacts {
     position: fixed;
     position-anchor: --contacts; 
     position-area: bottom span-right;
     min-width: max-content;
-    transform: translate(-10px, 10px);
+    transform: translate(-0.625rem, 0.625rem);
 }
 
 #exports {
@@ -220,7 +220,7 @@ li {
     left: anchor(right);
     min-width: max-content;
     margin: initial;
-    transform: translate(10px, 0);
+    transform: translate(0.625rem, 0);
 }
 
 .banner {
@@ -258,7 +258,7 @@ li {
     }
     #exports {
         position-area: bottom span-right;
-        transform: translate(0, 10px);
+        transform: translate(0, 0.625rem);
         position: fixed;
         top: anchor(bottom);
         left: anchor(left);
