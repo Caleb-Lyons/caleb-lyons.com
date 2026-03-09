@@ -7,41 +7,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Caleb Lyons' Portfolio</title>
   <link href="styles.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down,arrow_right,contact_page,content_copy,contextual_token,download,jamboard_kiosk,newsmode&display=block" /> 
+  <link rel="icon" type="image/png" href="Icons/favicon-16light.png" sizes="16x16" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="Icons/favicon-16light.png" sizes="32x32" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="Icons/favicon-16dark.png" sizes="16x16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="Icons/favicon-16dark.png" sizes="32x32" media="(prefers-color-scheme: dark)">
 </head>
 
 <body>
   <div class="container">
     <div>
-      <span class="button"><a href="index.html" class="button"><h1>Caleb Lyons' Portfolio</h1></a><button class="nav" popovertarget="nav"><img src=""><span class="material-symbols-outlined">arrow_drop_down</span></button></span>
-      <a href="Downloads/CalebL_Portfolio.pdf" class="button" class="hideOnMobile">Projects</a>
-      <button class="downloads" popovertarget="downloads">Downloads</button>
-      <button class="contacts" popovertarget="contacts">Contact Me</button>
+      <span class="button"><a href="index.html" class="button"><h1>Caleb Lyons' Portfolio</h1></a><button class="nav" popovertarget="nav"><img src="Icons/down.svg" height="20rem"></button></span>
+      <a id="hideOnTablet" class="button" href="Downloads/CalebL_Portfolio.pdf">Projects</a>
+      <button id="hideOnTablet" class="downloads" popovertarget="downloads">Downloads</button>
+      <button id="hideOnMobile" class="contacts" popovertarget="contacts">Contact Me</button>
     </div>
   </div>
   
   <div class="menu" id="nav" popover><ul>
-    <nav><li><a href="Downloads/CalebL_Portfolio" class="button"><span class="material-symbols-outlined">contextual_token</span>&nbsp;Project Gallery</a></li>
-    <li><a href="#" class="button"><span class="material-symbols-outlined">contact_page</span>&nbsp;About Me</a></li></nav>
-    <li><button class="exports" popovertarget="exports"><span class="material-symbols-outlined">download</span>&nbsp;Export Portfolio as PDF</button></li>
+    <nav><li><a href="Downloads/CalebL_Portfolio.pdf" class="button"><img src="Icons/letter.svg" height="30rem">&nbsp;Project Gallery</a></li>
+    <li><a href="#" class="button"><img src="Icons/contact.svg" height="30rem">&nbsp;About Me</a></li></nav>
+    <li><button class="exports" popovertarget="exports"><img src="Icons/download.svg" height="30rem">&nbsp;Export Portfolio as PDF&nbsp;<img src="Icons/right.svg" height="30rem"></button></li>
   </ul></div>
   
   <div class="menu" id="downloads" popover><ul>
-    <li><a href="Downloads/CalebL_Resume.pdf" target="_blank" class="button" download><span class="material-symbols-outlined">contact_page</span>&nbsp;My Resume</a></li>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button" download><span class="material-symbols-outlined">jamboard_kiosk</span>&nbsp;&nbsp;Digital Portfolio PDF</a></li>
-    <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button" download><span class="material-symbols-outlined">newsmode</span>&nbsp;&nbsp;Letter Paper Portfolio PDF</a></li>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button" download><span class="material-symbols-outlined">contextual_token</span>&nbsp;&nbsp;Tabloid Paper Portfolio</a></li>
+    <li><a href="Downloads/CalebL_Resume.pdf" target="_blank" class="button download" download><img src="Icons/contact.svg" height="30rem">&nbsp;My Resume</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/screen.svg" height="30rem">&nbsp;&nbsp;Digital Portfolio PDF</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg" height="30rem">&nbsp;&nbsp;Letter Paper Portfolio PDF</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/tabloid.svg" height="30rem">&nbsp;&nbsp;Tabloid Paper Portfolio</a></li>
   </ul></div>
 
   <div class="menu" id="exports" popover><ul>
-    <li><a href="Downloads/CalebL_Portfolio" target="_blank" class="button" download><span class="material-symbols-outlined">jamboard_kiosk</span>&nbsp;&nbsp;Digital Presentation ( 4K )</a></li>
-    <li><a href="Downloads/CalebLyons_Portfolio" target="_blank" class="button" download><span class="material-symbols-outlined">newsmode</span>&nbsp;&nbsp;Letter Paper ( 8.5x11 in )</a></li>
-    <li><a href="Downloads/CalebL_Portfolio" target="_blank" class="button" download><span class="material-symbols-outlined">contextual_token</span>&nbsp;&nbsp;Tabloid Paper ( 17x11 in )</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/screen.svg" height="30rem">&nbsp;&nbsp;Digital Presentation ( 4K )</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg" height="30rem">&nbsp;&nbsp;Letter Paper ( 8.5x11 in )</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/tabloid.svg" height="30rem">&nbsp;&nbsp;Tabloid Paper ( 17x11 in )</a></li>
   </ul></div>
 
   <div class="menu" id="contacts" popover><ul>
-    <li><button onclick="copyEmail()"><span class="material-symbols-outlined">content_copy</span>&nbsp;caleb.mi.lyons@gmail.com</button></li>
-    <li><button onclick="copyPhone()"><span class="material-symbols-outlined">content_copy</span>&nbsp;(913) 302-0440</button></li>
+    <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg" height="30rem">&nbsp;caleb.mi.lyons@gmail.com</button></li>
+    <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg" height="30rem">&nbsp;(913) 302-0440</button></li>
+    <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/"target="_blank" class="external button"><img src="Icons/LinkedIn.svg" height="30rem">&nbsp;LinkedIn</a></li>
   </ul></div>
 
   <script>
@@ -57,25 +61,23 @@
   <main>
 
 
-    <img height="100%" width="100%" src="hello world.jpeg" class="banner">
+    <img height="100%" width="100%" src="Images/placeholder.jpg" class="banner">
 
 
     <div>
-      <div><h2>Who Am I?</h2></div>
-      <div class="collumn">
-        <div><p>I’m Caleb Lyons, I do brand design work, but that's not my only hat. I’ve found success in many areas of Design, UI/UX, packaging, ad campaigns, illustrative posters, and even some 3D designs. But why even offer those skills if you’re only going to get hired to do one of them? Well, you’re never going to just have website, or just packaging, or just an ad; no, you’re going to have a system working together  and I think it’s very important to understand how each part works and interacts with the other  whether you’re building that system or designing a part of it. My focus lies in those systems I like to try to understand how they push and pull each other, so that we can design something that doesn’t fight with itself, but fights for itself.  
-
- </p></div>
-        <div class="fullheight"><img width="100%" height="100%" src="hello world.jpeg"></div>
+      <div>
+        <div><h2>Hey There!</h2>
+          <p>Hello and welcome to my portfolio website! I'm Caleb, a graphic designer with a knack for brand design. Specifically, I love systems. </p>
+          <p>This website is the perfect example of that. I've <a href="https://github.com/Caleb-Lyons/caleb-lyons.com">coded everything here</a> with my own ten fingers, without a template, simply for the challenge. Before this website, I didn't even know what HTML was.</p>
+        </div>
+        <div><img height="100%" width="100%" src="Images/me.jpeg"></div>
       </div>
     </div>
 
     <div>
       <div><h2>Projects</h2></div>
-      <img height="500" width="100%" src="hello world.jpeg">
+      <img src="Images/placeholder.jpg">
     </div>
   </main>
 </body>
-
 </html>
-

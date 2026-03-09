@@ -6,20 +6,15 @@
     box-sizing: border-box;
 }
 
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 20;
-  font-size: 0.5rem;
-}
-
 body {
     margin: calc(100dvh + 128px) 4vw 50dvh 4vw;
     min-height: 100vh;
     font-family: sans-serif;
+}
+
+a {
+    font-weight: 500;
+    color: rgb(53, 53, 53);
 }
 
 h1 {
@@ -31,46 +26,42 @@ h1 {
 h2 {
     font-family: sans-serif;
     padding-bottom: 1.5rem;
+    font-size: 2rem;
+    width: min-content;
 }
 p {
     font-family: sans-serif;
-    max-width: 650px;
-    width: auto;
     line-height: 1.65rem;
+    margin-bottom: 1.5rem;
 }
 
 img {
     object-fit: cover;
-    max-inline-size: 100%;
-    max-width: 100%;
     border-radius: 7.5px;
     padding: 5px;
+    max-inline-size: 100%;
 }
 
-div {
-    flex-direction: column;
+main > div {
     max-width: 750px;
     margin: auto;
     width: 100%;
     margin-bottom: 128px;
-    div {
-    padding: 0;
-    margin: 0;
+    > div {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 2rem;
+        > div {
+            flex: 110;
+        }
     }
-}
-
-.fullheight {
-    height: 100%;
-}
-
-.collumn {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: 1fr 1fr;
 }
 
 .button, button {
     font-size: 12pt;
+    font-weight: normal;
     text-decoration: none;
     color: black;
     height: 50px;
@@ -126,15 +117,18 @@ li {
         :first-child {
             margin-right: auto;
             color: white;
+            min-width: max-content;
         }
         span {
             padding: 0;
+            margin: 0;
             a {
-                padding-right: 7.5px;
+                padding-right: 3px;
                 border-radius: 5px 0 0 5px;
             }
             button {
-                padding-left: 0px;
+                padding-right: 15px;
+                padding-left: 3px;
                 border-radius: 0 5px 5px 0;
             }
             a:hover, button:hover {
@@ -159,7 +153,7 @@ li {
     .exports {
         anchor-name: --exports;  
     }
-    }
+}
 
 .menu {
     width: fit-content;
@@ -170,6 +164,7 @@ li {
     background-color:  rgba(0, 0, 0, 0.616);
     backdrop-filter: blur(10px);
     border-width: 0;
+    overflow: hidden;
     .button, button {
         width: 100%;
         max-inline-size: 100%;
@@ -197,19 +192,25 @@ li {
     position: fixed;
     position-anchor: --nav;
     position-area: bottom span-right;
+    min-width: max-content;
     margin: initial;
+    transform: translate(-35px, 10px);
 }
 
 #downloads {
     position: fixed;
     position-anchor: --downloads;
-    position-area: bottom span-left;
+    position-area: bottom span-right;
+    min-width: max-content;
     margin: initial;
+    transform: translate(-30px, 10px);
 }
 #contacts {
     position: fixed;
     position-anchor: --contacts; 
-    position-area: bottom span-left;
+    position-area: bottom span-right;
+    min-width: max-content;
+    transform: translate(-10px, 10px);
 }
 
 #exports {
@@ -217,14 +218,11 @@ li {
     position-anchor: exports; 
     top: anchor(top);
     left: anchor(right);
+    min-width: max-content;
     margin: initial;
+    transform: translate(10px, 0);
 }
 
-@media(max-width: 800px) {
-    .hideOnMobile {
-      display: none;  
-    }
-}
 .banner {
     position: absolute;
     top: 0;
@@ -232,4 +230,59 @@ li {
     border-radius: 0;
     padding: 0;
     z-index: -1;
+}
+
+
+.copy:hover img {
+    content: url(Icons/copy.svg);
+}
+
+.copy:active img {
+    content: url(Icons/copied.svg);
+}
+
+.download:hover img {
+    content: url(Icons/download.svg);
+}
+
+.download:active img {
+    content: url(Icons/downloaded.svg);
+}
+
+.external:hover img {
+    content: url(Icons/external.svg);
+}
+
+@media (max-width: 800px) {
+    #hideOnTablet {display: none;
+    }
+    #exports {
+        position-area: bottom span-right;
+        transform: translate(0, 10px);
+        position: fixed;
+        top: anchor(bottom);
+        left: anchor(left);
+        margin: initial;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    main > div > div {
+        flex-wrap: wrap-reverse;
+    }
+    .copy img {
+    content: url(Icons/copy.svg);
+    }
+    .download img {
+        content: url(Icons/download.svg);
+    }
+    .external img {
+        content: url(Icons/external.svg);
+    }
+}
+
+@media (max-width: 450px) {
+    #hideOnMobile {display: none;
+    }
 }
