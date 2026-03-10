@@ -16,36 +16,36 @@
 <body>
   <div class="container">
     <div>
-      <span class="button"><a href="index.html" class="button"><h1>Caleb Lyons' Portfolio</h1></a><button class="nav" popovertarget="nav"><img src="Icons/down.svg" height="20rem"></button></span>
-      <a id="hideOnTablet" class="button" href="Downloads/CalebL_Portfolio.pdf">Projects</a>
-      <button id="hideOnTablet" class="downloads" popovertarget="downloads">Downloads</button>
-      <button id="hideOnMobile" class="contacts" popovertarget="contacts">Contact Me</button>
+      <h1><span class="button"><a href="index.html" class="button">Caleb Lyons' Portfolio</a><button class="nav" popovertarget="nav"><img class="down" src="Icons/down.svg"></button></span></h1>
+      <a class="button hideOnTablet" href="Downloads/CalebL_Portfolio.pdf" target="_blank">Projects</a>
+      <button class="downloads hideOnTablet" popovertarget="downloads">Downloads</button>
+      <button class="contacts hideOnMobile" popovertarget="contacts">Contact Me</button>
     </div>
   </div>
   
-  <div class="menu" id="nav" popover><ul>
-    <nav><li><a href="Downloads/CalebL_Portfolio.pdf" class="button"><img src="Icons/letter.svg" height="30rem">&nbsp;Project Gallery</a></li>
-    <li><a href="#" class="button"><img src="Icons/contact.svg" height="30rem">&nbsp;About Me</a></li></nav>
-    <li><button class="exports" popovertarget="exports"><img src="Icons/download.svg" height="30rem">&nbsp;Export Portfolio as PDF&nbsp;<img src="Icons/right.svg" height="30rem"></button></li>
-  </ul></div>
+  <div class="menu" id="nav" popover>
+    <nav><ul><li><a href="Downloads/CalebL_Portfolio.pdf" class="button" target="_blank"><img src="Icons/letter.svg">&nbsp;Project Gallery</a></li>
+    <li><a href="#About" class="button"><img src="Icons/contact.svg">&nbsp;About Me</a></li>
+    <li><button class="exports" popovertarget="exports"><img src="Icons/download.svg">&nbsp;Export Portfolio as PDF&nbsp;<img src="Icons/right.svg"></button></li>
+  </ul></nav></div>
   
   <div class="menu" id="downloads" popover><ul>
-    <li><a href="Downloads/CalebL_Resume.pdf" target="_blank" class="button download" download><img src="Icons/contact.svg" height="30rem">&nbsp;My Resume</a></li>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/screen.svg" height="30rem">&nbsp;&nbsp;Digital Portfolio PDF</a></li>
-    <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg" height="30rem">&nbsp;&nbsp;Letter Paper Portfolio PDF</a></li>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/tabloid.svg" height="30rem">&nbsp;&nbsp;Tabloid Paper Portfolio</a></li>
+    <li><a href="Downloads/CalebL_Resume.pdf" target="_blank" class="button download" download><img src="Icons/contact.svg">&nbsp;My Resume</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/screen.svg">&nbsp;&nbsp;Digital Portfolio PDF</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper Portfolio PDF</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/tabloid.svg">&nbsp;&nbsp;Tabloid Paper Portfolio</a></li>
   </ul></div>
 
   <div class="menu" id="exports" popover><ul>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/screen.svg" height="30rem">&nbsp;&nbsp;Digital Presentation ( 4K )</a></li>
-    <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg" height="30rem">&nbsp;&nbsp;Letter Paper ( 8.5x11 in )</a></li>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/tabloid.svg" height="30rem">&nbsp;&nbsp;Tabloid Paper ( 17x11 in )</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/screen.svg">&nbsp;&nbsp;Digital Presentation ( 4K )</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper ( 8.5x11 in )</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/tabloid.svg">&nbsp;&nbsp;Tabloid Paper ( 17x11 in )</a></li>
   </ul></div>
 
   <div class="menu" id="contacts" popover><ul>
-    <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg" height="30rem">&nbsp;caleb.mi.lyons@gmail.com</button></li>
-    <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg" height="30rem">&nbsp;(913) 302-0440</button></li>
-    <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/"target="_blank" class="external button"><img src="Icons/LinkedIn.svg" height="30rem">&nbsp;LinkedIn</a></li>
+    <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;caleb.mi.lyons@gmail.com</button></li>
+    <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;(913) 302-0440</button></li>
+    <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;LinkedIn</a></li>
   </ul></div>
 
   <script>
@@ -60,24 +60,15 @@
   </script>
   <main>
 
+    <img src="Images/placeholder.jpg" class="banner">
 
-    <img height="100%" width="100%" src="Images/placeholder.jpg" class="banner">
-
-
-    <div>
-      <div>
-        <div><h2>Hey There!</h2>
+    <div><div>
+        <div><h2 id="About">Hey There!</h2>
           <p>Hello and welcome to my portfolio website! I'm Caleb, a graphic designer with a knack for brand design. Specifically, I love systems. </p>
-          <p>This website is the perfect example of that. I've <a href="https://github.com/Caleb-Lyons/caleb-lyons.com">coded everything here</a> with my own ten fingers, without a template, simply for the challenge. Before this website, I didn't even know what HTML was.</p>
+          <p>This website is the perfect example of that. I've <a href="https://github.com/Caleb-Lyons/caleb-lyons.com" target="_blank">coded everything here</a> with my own ten fingers, without a template, simply for the challenge. Before this website, I didn't even know what HTML was.</p>
         </div>
-        <div><img height="100%" width="100%" src="Images/me.jpeg"></div>
-      </div>
-    </div>
-
-    <div>
-      <div><h2>Projects</h2></div>
-      <img src="Images/placeholder.jpg">
-    </div>
+        <div><img src="Images/me.jpeg" alt="Photo of Caleb Lyons"></div>
+    </div></div>
   </main>
 </body>
 </html>
