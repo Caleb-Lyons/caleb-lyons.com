@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.showOnMobile {
+        display: none;
+}
+
 body {
     margin: calc(100vh + 8rem) 4vw 15vh 4vw;
     min-height: 100vh;
@@ -26,13 +30,14 @@ h1 {
 h2 {
     font-family: sans-serif;
     padding-bottom: 1.5rem;
-    font-size: 2rem;
+    font-size: 3rem;
     width: min-content;
 }
 p {
     font-family: sans-serif;
-    line-height: 1.65rem;
+    line-height: calc(1.5rem * 1.65);
     margin-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
 img {
@@ -62,7 +67,7 @@ main > div {
 }
 
 .button, button {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: normal;
     text-decoration: none;
     color: black;
@@ -117,7 +122,7 @@ li {
         padding: 0.313rem;
         border-radius: 0.625rem;
         box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.127);
-        background-color: rgba(0, 0, 0, 0.616);
+        background-color: rgba(4, 0, 34, 0.646);
         backdrop-filter: blur(0.625rem);
         width: 100%;
         max-width: 100%;
@@ -160,6 +165,9 @@ li {
     .contacts {
         anchor-name: contacts;  
     }
+    .contactsmobile {
+        anchor-name: contactsmobile;  
+    }
     .exports {
         anchor-name: exports;  
     }
@@ -171,7 +179,7 @@ li {
     padding: 0.313rem;
     border-radius: 0.625rem;
     box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.127);
-    background-color:  rgba(0, 0, 0, 0.616);
+    background-color:  rgba(4, 0, 34, 0.646);
     backdrop-filter: blur(0.625rem);
     border-width: 0;
     overflow: hidden;
@@ -210,12 +218,24 @@ li {
     margin: initial;
     transform: translate(-1.875rem, 0.625rem);
 }
+
 #contacts {
     position: fixed;
     position-anchor: contacts; 
-    position-area: bottom span-right;
+    position-area: bottom span-left;
     min-width: max-content;
-    transform: translate(-0.625rem, 0.625rem);
+    transform: translate(0.4rem, 0.625rem);
+}
+
+#contactsmobile {
+    position-area: bottom span-right;
+    transform: translate(0, 0.625rem);
+    position: fixed;
+    top: anchor(bottom);
+    left: anchor(left);
+    margin: initial;
+    position-anchor: contactsmobile; 
+    min-width: max-content;
 }
 
 #exports {
@@ -260,7 +280,7 @@ li {
     content: url(Icons/external.svg);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     .hideOnTablet {display: none;
     }
     #exports {
@@ -271,18 +291,13 @@ li {
         left: anchor(left);
         margin: initial;
     }
-    
-}
-
-@media (max-width: 650px) {
-    main > div > div {
-        flex-wrap: wrap-reverse;
-        > div {
-            min-width: 50vw;
-        }
+    .right {
+        content: url(Icons/down.svg);
+        height: 0.5rem;
+        width: 0.5rem;
     }
     .copy img {
-    content: url(Icons/copy.svg);
+        content: url(Icons/copy.svg);
     }
     .download img {
         content: url(Icons/download.svg);
@@ -292,8 +307,20 @@ li {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
+    main > div > div {
+        flex-wrap: wrap-reverse;
+        > div {
+            min-width: 50vw;
+        }
+    }
+}
+
+@media (max-width: 485px) {
     .hideOnMobile {
         display: none;
+    }
+    .showOnMobile {
+        display: flex;
     }
 }

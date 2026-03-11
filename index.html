@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <div>
-      <h1><span class="button"><a href="index.html" class="button">Caleb Lyons' Portfolio</a><button class="nav" popovertarget="nav"><img class="down" src="Icons/down.svg"></button></span></h1>
+      <h1><span class="button"><a href="index.html" class="button"><img src="Icons/logo.svg">&nbsp;Caleb Lyons' Portfolio</a><button class="nav" popovertarget="nav"><img class="down" src="Icons/down.svg"></button></span></h1>
       <a class="button hideOnTablet" href="Downloads/CalebL_Portfolio.pdf" target="_blank">Projects</a>
       <button class="downloads hideOnTablet" popovertarget="downloads">Downloads</button>
       <button class="contacts hideOnMobile" popovertarget="contacts">Contact Me</button>
@@ -26,14 +26,15 @@
   <div class="menu" id="nav" popover>
     <nav><ul><li><a href="Downloads/CalebL_Portfolio.pdf" class="button" target="_blank"><img src="Icons/letter.svg">&nbsp;Project Gallery</a></li>
     <li><a href="#About" class="button"><img src="Icons/contact.svg">&nbsp;About Me</a></li>
-    <li><button class="exports" popovertarget="exports"><img src="Icons/download.svg">&nbsp;Export Portfolio as PDF&nbsp;<img src="Icons/right.svg"></button></li>
+    <li class="hideOnMobile"><button class="exports" popovertarget="exports"><img src="Icons/download.svg">&nbsp;Export Portfolio as PDF&nbsp;<img class="right" src="Icons/right.svg"></button></li>
+    <li class="showOnMobile"><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Download Portfolio</a></li>
+    <li class="showOnMobile"><button class="contactsmobile" popovertarget="contactsmobile"><img src="Icons/contact.svg">&nbsp;Contact Me&nbsp;<img class="down" src="Icons/down.svg"></button></li>
   </ul></nav></div>
   
   <div class="menu" id="downloads" popover><ul>
     <li><a href="Downloads/CalebL_Resume.pdf" target="_blank" class="button download" download><img src="Icons/contact.svg">&nbsp;My Resume</a></li>
     <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/screen.svg">&nbsp;&nbsp;Digital Portfolio PDF</a></li>
     <li><a href="Downloads/CalebLyons_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper Portfolio PDF</a></li>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" target="_blank" class="button download" download><img src="Icons/tabloid.svg">&nbsp;&nbsp;Tabloid Paper Portfolio</a></li>
   </ul></div>
 
   <div class="menu" id="exports" popover><ul>
@@ -47,6 +48,13 @@
     <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;(913) 302-0440</button></li>
     <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;LinkedIn</a></li>
   </ul></div>
+
+  <div class="menu" id="contactssmobile" popover><ul>
+    <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;caleb.mi.lyons@gmail.com</button></li>
+    <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;(913) 302-0440</button></li>
+    <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;LinkedIn</a></li>
+  </ul></div>
+
 
   <script>
     function copyEmail() {
@@ -67,7 +75,6 @@
           <p>Hello and welcome to my portfolio website! I'm Caleb, a graphic designer with a knack for brand design. Specifically, I love systems. </p>
           <p>This website is the perfect example of that. I've <a href="https://github.com/Caleb-Lyons/caleb-lyons.com" target="_blank">coded everything here</a> with my own ten fingers, without a template, simply for the challenge. Before this website, I didn't even know what HTML was.</p>
         </div>
-        <div><img src="Images/me.jpeg" alt="Photo of Caleb Lyons"></div>
     </div></div>
   </main>
 </body>
