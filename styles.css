@@ -1,4 +1,4 @@
-/*Caleb Lyons - 2/27*/
+/*Caleb Lyons - 3/12*/
 
 * {
     padding: 0;
@@ -30,14 +30,14 @@ h1 {
 h2 {
     font-family: sans-serif;
     padding-bottom: 1.5rem;
-    font-size: 3rem;
+    font-size: 2.30rem;
     width: min-content;
 }
 p {
     font-family: sans-serif;
-    line-height: calc(1.5rem * 1.65);
+    line-height: calc(1.15rem * 1.65);
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
 }
 
 img {
@@ -228,14 +228,14 @@ li {
 }
 
 #contactsmobile {
-    position-area: bottom span-right;
-    transform: translate(0, 0.625rem);
     position: fixed;
+    position-anchor: contactsmobile; 
+    position-area: bottom span-left;
+    transform: translate(0.313rem, 0.625rem);
     top: anchor(bottom);
     left: anchor(left);
-    margin: initial;
-    position-anchor: contactsmobile; 
     min-width: max-content;
+    margin: initial;
 }
 
 #exports {
@@ -280,15 +280,21 @@ li {
     content: url(Icons/external.svg);
 }
 
+.card {
+    background-color: rgb(235, 235, 239);
+    padding: 4vw;
+    border-radius: 0.625rem;
+}
+
 @media (max-width: 850px) {
     .hideOnTablet {display: none;
     }
     #exports {
-        position-area: bottom span-right;
-        transform: translate(0, 0.625rem);
+        position-area: bottom span-left;
+        transform: translate(0.313rem, 0.625rem);
         position: fixed;
         top: anchor(bottom);
-        left: anchor(left);
+        right: anchor(right);
         margin: initial;
     }
     .right {
