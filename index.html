@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Caleb Lyons - 3/12/2026 -->
+<!-- Caleb Lyons - 3/22/2026 - Midterm Project for HTML/CSS -->
 
 <html lang="en-us">
 <head>
@@ -15,7 +15,11 @@
 </head>
 
 <body>
-  <div class="container">
+
+
+  <!-- Nav bar in a lot of divs (the only way I could get it to float off of the edges, be responsive, and be sticky) -->
+
+  <div id="wrapper">
     <div>
       <h1><span class="button"><a href="index.html" class="button"><img src="Icons/logo.svg">&nbsp;Caleb Lyons</a><button class="nav" popovertarget="nav"><img class="down" src="Icons/down.svg"></button></span></h1>
       <a class="button hideOnTablet" href="index.html#about">About Me</a>
@@ -24,6 +28,9 @@
     </div>
   </div>
   
+
+  <!-- All of the popover menus -->
+
   <div class="menu" id="nav" popover>
     <nav><ul><li><a href="index.html#Projects" class="button"><img src="Icons/project.svg">&nbsp;&nbsp;Project Gallery</a></li>
     <li><a href="index.html#about" class="button"><img src="Icons/about.svg">&nbsp;&nbsp;About Me</a></li>
@@ -57,6 +64,8 @@
   </ul></div>
 
 
+  <!-- Amatuer JS for the copy email/phone buttons -->
+
   <script>
     function copyEmail() {
         navigator.clipboard.writeText
@@ -67,17 +76,26 @@
             ("913 302 0440");
     }
   </script>
+
+
+  <!-- Finally the <main> -->
+
   <main>
+
+
+    <!-- Banner splash image -->
 
     <div class="banner">
       <div>
         <h2 id="About">Hey There!</h2>
-        <p>I'm Caleb, a graphic designer obsessed with detail.</p>
-        <p>Here, you'll find everything by me, from <a href="Downloads/CalebL_Resume.pdf">my resume</a> to <a href="Downloads/CalebLyons_Portfolio.pdf">a PDF copy of my portfolio,</a> you can access it all in the nav bar above.</p>
+        <p>Welcome to my website. Here, you'll find everything by me, from <a href="Downloads/CalebL_Resume.pdf">my resume</a> to <a href="Downloads/CalebLyons_Portfolio.pdf">a PDF copy of my portfolio,</a> you can access it all in the nav bar above.</p>
         <div><a class="button" href="index.html#about">To About Me<img src="Icons/scroll.svg"></a><a class="button" href="#Projects">To Projects&nbsp;<img src="Icons/scroll.svg"></a></div>
       </div>
     </div>
     
+
+    <!-- The my work section -->
+
     <div class="projectcards">
       <h2 id="Projects">My Projects</h2>
       <div> 
@@ -98,10 +116,25 @@
       </div>
     </div> 
     
+
+    <!-- About me section -->
+
     <div>
     <h2 id="about">About Me</h2>
-    <div><div><p></p></div>
+    <div><div>
+      <h3>My Time On This Earth.</h3>
+      <p>My time as a graphic designer started way back in middle school. I had been volunteering for my church, and they had me operating the tech booth and making social media posts. Although it was a relatively small role, I loved playing a role in a team of people just like me to create something real; something important; something that people relied on every Sunday.</p>
+      <p>So, when I progressed to high school, I was basically primed for the best decision of my life: Applying to Olathe’s 21st Century e-Communications Program. It enabled students to get a feel for each kind of e-Communication field (graphic design, web design, animation, and video/journalism) and then choose one to get real, hands-on experience in while building college credit.</p>
+      <p>After my first year, I couldn’t choose. I loved all of them and could see myself doing any of them. I couldn’t choose just one, so I chose two. Graphic design and animation. That decision, while being twice as much work, equipped me to get hard experience in the Adobe Creative Cloud, animation methods, and graphic design principles. Inevitably, I began experimenting with fusing the two. “Could this poster be more than just a static image?” “What happens when I make typography 3D?”</p>
+    </div>
     <div><img src="Images/me.jpg" loading="lazy"></div></div>
+    </div>
+  
+    <div><p>That tendency of blending mediums bled into my college education, where I immediately began trying to mesh different design mediums, pushing my own limits, and coloring in a wide variety of skills. I lettered typography out of comic graphics. I embed UI/UX into print, that one got featured in JCCC's Unfinished Futures art exhibition.</p></div>
+    
+    <div>
+      <h3>My Ambition</h3>
+      <p>That’s exactly what I’m looking forward to doing now. Designing bold, unique designs that push the boundaries of their medium while continuing to expand my skillset.</p>
     </div>
 
   </main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Caleb Lyons - 3/12/2026 -->
+<!-- Caleb Lyons - 3/22/2026 - Midterm Project for HTML/CSS -->
 
 <html lang="en-us">
 <head>
@@ -14,6 +14,10 @@
 </head>
 
 <body class="project">
+
+  
+  <!-- Nav bar in a lot of divs (the only way I could get it to float off of the edges, be responsive, and be sticky) -->
+
   <div class="container">
     <div>
       <h1><span class="button"><a href="index.html" class="button"><img src="Icons/logo.svg">&nbsp;Caleb Lyons</a><button class="nav" popovertarget="nav"><img class="down" src="Icons/down.svg"></button></span></h1>
@@ -23,6 +27,9 @@
     </div>
   </div>
   
+
+  <!-- All of the popover menus -->
+
   <div class="menu" id="nav" popover>
     <ul><nav><li><a href="index.html#Projects" class="button"><img src="Icons/back.svg">&nbsp;&nbsp;Back to Project Gallery</a></li>
     <li><a href="index.html#about" class="button"><img src="Icons/about.svg">&nbsp;&nbsp;About Me</a></li>
@@ -56,6 +63,8 @@
   </ul></div>
 
 
+  <!-- Amatuer JS for the copy email/phone buttons -->
+
   <script>
     function copyEmail() {
         navigator.clipboard.writeText
@@ -66,31 +75,36 @@
             ("913 302 0440");
     }
   </script>
+
+
+  <!-- Finally the <main> -->
+
   <main>
-<div>
-  <img src="Images/Colorado/1.jpg" loading="lazy">
-  <img src="Images/Colorado/2.jpg" loading="lazy">
-  <img src="Images/Colorado/3.jpg" loading="lazy">
-  <img src="Images/Colorado/4.jpg" loading="lazy">
-  <img src="Images/Colorado/5.jpg" loading="lazy">
-  <img src="Images/Colorado/6.jpg" loading="lazy">
-  <img src="Images/Colorado/7.jpg" loading="lazy">
-  <img src="Images/Colorado/8.jpg" loading="lazy">
-  <img src="Images/Colorado/9.jpg" loading="lazy">
-  <img src="Images/Colorado/10.jpg" loading="lazy">
-  <img src="Images/Colorado/11.jpg" loading="lazy">
-  <img src="Images/Colorado/12.jpg" loading="lazy">
-  <img src="Images/Colorado/13.jpg" loading="lazy">
-  <img src="Images/Colorado/14.jpg" loading="lazy">
-  <img src="Images/Colorado/15.jpg" loading="lazy">
-  <img src="Images/Colorado/16.jpg" loading="lazy">
-  <img src="Images/Colorado/17.jpg" loading="lazy">
-  <img src="Images/Colorado/18.jpg" loading="lazy">
-  <img src="Images/Colorado/19.jpg" loading="lazy">
+    
 
-</div>
+    <!-- A thousand images -->
 
-
+    <div>
+      <img src="Images/Colorado/1.jpg" loading="lazy">
+      <img src="Images/Colorado/2.jpg" loading="lazy">
+      <img src="Images/Colorado/3.jpg" loading="lazy">
+      <img src="Images/Colorado/4.jpg" loading="lazy">
+      <img src="Images/Colorado/5.jpg" loading="lazy">
+      <img src="Images/Colorado/6.jpg" loading="lazy">
+      <img src="Images/Colorado/7.jpg" loading="lazy">
+      <img src="Images/Colorado/8.jpg" loading="lazy">
+      <img src="Images/Colorado/9.jpg" loading="lazy">
+      <img src="Images/Colorado/10.jpg" loading="lazy">
+      <img src="Images/Colorado/11.jpg" loading="lazy">
+      <img src="Images/Colorado/12.jpg" loading="lazy">
+      <img src="Images/Colorado/13.jpg" loading="lazy">
+      <img src="Images/Colorado/14.jpg" loading="lazy">
+      <img src="Images/Colorado/15.jpg" loading="lazy">
+      <img src="Images/Colorado/16.jpg" loading="lazy">
+      <img src="Images/Colorado/17.jpg" loading="lazy">
+      <img src="Images/Colorado/18.jpg" loading="lazy">
+      <img src="Images/Colorado/19.jpg" loading="lazy">
+    </div>
   </main>
 </body>
 </html>

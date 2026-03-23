@@ -1,4 +1,5 @@
-/*Caleb Lyons - 3/12*/
+/* Caleb Lyons - 3/22/2026 - Midterm Project for HTML/CSS */
+
 @font-face {
     font-family: Montserrat;
     src: url(Fonts/Montserrat-VariableFont_wght.ttf);
@@ -19,6 +20,9 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
+
+
+/* Website is responsive for tablet and mobile */
 
 .showOnMobile, .showOnTablet {
     display: none;
@@ -68,13 +72,22 @@ img {
     height: 60vh;
 }
 
+
+/* This is the first time I've done this, but apperently you can nest selectors inside of selectors? Sort of like how media queries work. 
+It's still too new to validate in the CSS Validator you gave us,
+but I found it to be a really handy way to organize my code.  */
+
+/* Default div grouping for all pages */
+
 main {
     max-width: 65rem;
     width: 100%;
     align-self: center;
     justify-self: center;
+
     > div {
         margin-bottom: 4rem;
+
         > div {
             width: 100%;
             padding: 0;
@@ -82,9 +95,11 @@ main {
             display: flex;
             gap: 1rem;
             justify-content: center;
+
             img {
                 width: 100%;
             }
+
             > div {
                 flex: 110;
                 flex-wrap: wrap;
@@ -97,14 +112,17 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(45vh, 1fr));
         gap: 1rem;
+
         div {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+
             div {
                 flex-direction: row;
                 align-items: center;
                 padding-right: 0.5rem;
+
                 img {
                     margin-left: auto;
                     width: 1.5rem;
@@ -116,6 +134,9 @@ main {
         }
     }
 }  
+
+
+/* button and <a> links disguised as buttons get the same styling */
 
 .button, button {
     font-family: WorkSans, "WorkSans", Tahoma, sans-serif;
@@ -133,20 +154,22 @@ main {
     display: flex;
     align-items: center;
     color: rgb(211, 211, 211);
+
     img {
         height: 1.5rem;
         width: 1.5rem;
     }
+
     .down {
         margin-left: auto;
         height: 1rem;
         width: 1rem;
     }
+
     .right {
         margin-left: auto;
     }
 }
-
 
 li {
     line-height: 0;
@@ -166,7 +189,10 @@ li {
     color: white;
 }
 
-.container {
+
+/* wrapper for the sticky nav bar, this is the only way I could get it to float */
+
+#wrapper {
     width: 100%;
     max-width: 100vw;
     position: fixed;
@@ -174,6 +200,7 @@ li {
     top: 0;
     padding: 2vw 3vw;
     color: white;
+
     div {
         padding: 0.313rem;
         border-radius: 0.625rem;
@@ -185,6 +212,7 @@ li {
         display: flex;
         flex-direction: row;
         justify-content: flex-end; 
+
         :first-child {
             margin-right: auto;
             color: white;
@@ -193,28 +221,36 @@ li {
             font-weight: 600;
             font-size: 1.1rem;
         }
+
         span {
             padding: 0;
             margin: 0;
+
             a {
                 padding-right: 0.313rem;
                 border-radius: 0.313rem 0 0 0.313rem;
             }
+
             button {
                 padding-right: 0.938rem;
                 padding-left: 0.188rem;
                 border-radius: 0 0.313rem 0.313rem 0;
             }
+
             a:hover, button:hover {
                 background-color: rgba(255, 255, 255, 0.1);
                 color: white;
             }
         }
+
         > span:hover {
             background-color: rgba(255, 255, 255, 0.1);
             color: white
         }
     }
+
+
+    /* H1 has to go over here to overwrite the button styling. The H1 is the "Caleb Lyons" button that brings you back to the homepage */
 
     h1 {
         font-family: Montserrat, sans-serif;
@@ -222,6 +258,9 @@ li {
         font-size: 1rem;
         font-weight: 500;
     }
+
+
+    /* declaring where each popover menu should anchor-position to */ 
 
     .nav {
         anchor-name: nav;
@@ -240,6 +279,9 @@ li {
     }
 }
 
+
+/* The popover menu itself */
+
 .menu {
     width: fit-content;
     height: fit-content;
@@ -250,6 +292,7 @@ li {
     backdrop-filter: blur(0.625rem);
     border-width: 0;
     overflow: hidden;
+
     .button, button {
         overflow: hidden;
         width: 100%;
@@ -262,6 +305,7 @@ li {
         cursor: pointer;
         color: rgb(211, 211, 211);
     }
+
     .button:hover, button:hover {
             background-color: rgba(255, 255, 255, 0.137);
             color: white;
@@ -315,6 +359,9 @@ li {
     transform: translate(0.625rem, 0);
 }
 
+
+/* Splash screen banner */
+
 .banner {
     position: absolute;
     top: 0;
@@ -331,6 +378,7 @@ li {
     display: flex;
     align-items: end;
     padding: auto;
+
     > div {
         padding: 4vw;
         max-width: max(46.875rem, 50vw);
@@ -342,12 +390,15 @@ li {
         div {
             margin-top: 1rem;
         }
+        
         h2 {
             font-size: clamp(3rem, 10vw, 5rem);
         }
+
         p {
             font-weight: 500;
         }
+
         .button {
             background-color: white;
             color: rgb(33, 33, 33);
@@ -355,6 +406,7 @@ li {
                 filter: invert(100%);
             }
         }
+
         .button:first-child {
             background-color: rgba(0, 0, 0, 0);
             border: white solid;
@@ -363,10 +415,12 @@ li {
                 filter: none;
             }
         }
+
         .button:hover {
             background-color: rgb(232, 232, 232);
             color: black;
         }
+
         div {
             display: flex;
             gap: 1rem;
@@ -374,24 +428,8 @@ li {
     }
 }
 
-.project {
-    background-color: rgb(69, 69, 77);
-    margin-top: calc(4vw + 3rem);
-    overflow-x: hidden;
-    main > div {
-        margin: auto;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: fit-content;
-            max-width: 150vh;
-        }
-    }
-}
+
+/* Hovering over buttons sometimes changes their icon, depending if they have a special action. Ex: copying */
 
 .copy:hover img {
     content: url(Icons/copy.svg);
@@ -413,13 +451,46 @@ li {
     content: url(Icons/external.svg);
 }
 
+
+/* Styling for any project pages, like the Colorado one */
+
+.project {
+    background-color: rgb(69, 69, 77);
+    margin-top: calc(4vw + 3rem);
+    overflow-x: hidden;
+
+    main > div {
+        margin: auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: fit-content;
+            max-width: 150vh;
+        }
+    }
+}
+
+
+/* Media queries for tablet */
+
 @media (max-width: 750px) {
+    
     .hideOnTablet {
         display: none;
     }
+
     .showOnTablet {
         display: inline;
     }
+    
+
+    /* Changing the contact me popover that nests underneath my name to pop down instead of right. So that it doesn't overflow out of the page on smaller screens */
+
     #contactsmobile {
         position-area: bottom span-left;
         transform: translate(0.313rem, 0.625rem);
@@ -428,31 +499,46 @@ li {
         right: anchor(right);
         margin: initial;
     }
+    
+
+    /* Since on table there is not ability to hover over buttons to preview what they do, the icons need to display their hover icons always */
+
     img.right {
         content: url(Icons/down.svg);
         height: 1rem;
         width: 1rem;
     }
+
     .copy img {
         content: url(Icons/copy.svg);
     }
+
     .download img {
         content: url(Icons/download.svg);
     }
+
     .external img {
         content: url(Icons/external.svg);
     }
+
     .banner {
         height: 90vh;
     }
+
+
+    /* Making images smaller and reversing the flex direction to display image for text */
+
     main {
         img {
             width: 50vh;
             height: 50vh;
         }
+        
         div div {
             flex-direction: column-reverse;
         }
+
+        
         .projectcards div {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
@@ -461,33 +547,48 @@ li {
 }
 
 
+/* Media query for mobile */
+
 @media (max-width: 425px) {
     .hideOnMobile {
         display: none;
     }
+
     .showOnMobile {
         display: inline;
     }
+
+    
+    /* This was hard. All of my work so far has been presented in 1920x1080 PDF presentations, which is normally fine for desktop. 
+    However, its awful for mobile users because even at max scale, they're tiny and you can see like 6 slides simutaneously.
+    The best solution I could come up with was by changing the entire page to a scroll right sort of deal, where the user is zoomed in on everthing
+    and reading everything left to right, sort of like reading a book. */
+
     .project {
         overflow-y: hidden;
         height: 100dvh;
         flex: none;
         margin: calc(4vw + 1rem) 0 4vw 0;
+
         main {
             height: 100%;
             margin: 0 0 5rem 0;
+
             > div {
                 height: 100%;
                 flex-direction: row;
                 overflow-x: scroll;
+
                 img {
                     width: 100vh;
                     height: min-content;
                     max-height: 80%;
                 }
+
                 :first-child {
                     margin-left: 4vw;
                 }
+
                 :last-child {
                     margin-right: 4vw;
                 }
