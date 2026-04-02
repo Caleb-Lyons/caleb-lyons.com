@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Caleb Lyons - 3/22/2026 - Midterm Project for HTML/CSS -->
+
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caleb Lyons: Redesigning Babel</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="Icons/favicon-16light.png" sizes="16x16" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="Icons/favicon-32light.png" sizes="32x32" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="Icons/favicon-16dark.png" sizes="16x16" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="Icons/favicon-32dark.png" sizes="32x32" media="(prefers-color-scheme: dark)">
+</head>
+
+<body class="project">
+
+
+  <!-- Nav bar in a lot of divs (the only way I could get it to float off of the edges, be responsive, and be sticky) -->
+
+  <div id="wrapper">
+    <div>
+      <h1><span class="button"><a href="index.html" class="button"><img src="Icons/logo.svg">&nbsp;Caleb Lyons</a><button class="nav" popovertarget="nav"><img class="down" src="Icons/down.svg"></button></span></h1>
+      <a class="button hideOnTablet" href="index.html#about">About Me</a>
+      <button class="downloads hideOnTablet" popovertarget="downloads">Downloads&nbsp;<img class="down" src="Icons/down.svg"></button>
+      <button class="contacts hideOnMobile" popovertarget="contacts">Contact Me&nbsp;<img class="down" src="Icons/down.svg"></button>
+    </div>
+  </div>
+  
+
+  <!-- All of the popover menus -->
+
+  <div class="menu" id="nav" popover>
+    <ul><nav><li><a href="index.html#Projects" class="button"><img src="Icons/back.svg">&nbsp;&nbsp;Back to Project Gallery</a></li>
+    <li><a href="index.html#about" class="button"><img src="Icons/about.svg">&nbsp;&nbsp;About Me</a></li>
+    <li class="hideOnTablet"><button class="exports" popovertarget="exports"><img src="Icons/export.svg">&nbsp;&nbsp;Export Portfolio as PDF&nbsp;<img class="right" src="Icons/right.svg"></button></li>
+    <li class="showOnTablet"><a href="Downloads/CalebL_Resume.pdf" class="button"><img src="Icons/resume.svg">&nbsp;&nbsp;My Resume</a></li>
+    <li class="showOnTablet"><a href="Downloads/CalebLyons_Portfolio.pdf" class="button"><img src="Icons/letter.svg">&nbsp;&nbsp;Portfolio PDF</a></li>
+    <li><button class="contactsmobile" popovertarget="contactsmobile"><img src="Icons/contact.svg">&nbsp;&nbsp;Contact Me&nbsp;<img class="right" src="Icons/right.svg"></button></li>
+  </ul></nav></div>
+  
+  <div class="menu" id="downloads" popover><ul>
+    <li><a href="Downloads/CalebL_Resume.pdf" class="button download" download><img src="Icons/resume.svg">&nbsp;&nbsp;My Resume</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" class="button download" download><img src="Icons/screen.svg">&nbsp;&nbsp;Digital Portfolio PDF</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper Portfolio PDF</a></li>
+  </ul></div>
+
+  <div class="menu" id="exports" popover><ul>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" class="button download" download><img src="Icons/screen.svg">&nbsp;&nbsp;Digital Presentation ( 4K )</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper ( 8.5x11 in )</a></li>
+  </ul></div>
+
+  <div class="menu" id="contacts" popover><ul>
+    <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;me@caleb-lyons.com</button></li>
+    <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;(913) 302-0440</button></li>
+    <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;&nbsp;LinkedIn</a></li>
+  </ul></div>
+
+  <div class="menu" id="contactsmobile" popover><ul>
+    <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;me@caleb-lyons.com</button></li>
+    <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;(913) 302-0440</button></li>
+    <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;LinkedIn</a></li>
+  </ul></div>
+
+
+  <!-- Amatuer JS for the copy email/phone buttons -->
+
+  <script>
+    function copyEmail() {
+        navigator.clipboard.writeText
+            ("me@caleb-lyons.com");
+    }
+    function copyPhone() {
+        navigator.clipboard.writeText
+            ("913 302 0440");
+    }
+  </script>
+
+
+  <!-- Finally the <main> -->
+
+  <main>
+    
+
+    <!-- A thousand images -->
+
+    <div>
+      <img src="Images/Babel/1.jpg" loading="lazy">
+      <img src="Images/Babel/2.jpg" loading="lazy">
+      <img src="Images/Babel/3.jpg" loading="lazy">
+      <img src="Images/Babel/4.jpg" loading="lazy">
+      <img src="Images/Babel/5.jpg" loading="lazy">
+      <img src="Images/Babel/6.jpg" loading="lazy">
+      <img src="Images/Babel/7.jpg" loading="lazy">
+      <img src="Images/Babel/8.jpg" loading="lazy">
+      <img src="Images/Babel/9.jpg" loading="lazy">
+      <img src="Images/Babel/10.jpg" loading="lazy">
+      <img src="Images/Babel/11.jpg" loading="lazy">
+      <img src="Images/Babel/12.jpg" loading="lazy">
+      <img src="Images/Babel/13.jpg" loading="lazy">
+    </div>
+  </main>
+</body>
+</html>
