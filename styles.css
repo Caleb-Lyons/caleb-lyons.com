@@ -36,9 +36,14 @@ body {
     text-wrap-style: pretty;
 }
 
-a {
-    color: rgb(55, 96, 162);
+main a {
+    color: #0025C8;
     font-weight: 500;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
 }
 
 .nounderline {
@@ -101,7 +106,7 @@ main {
             padding: 0;
             margin: 1.5rem 0;
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             justify-content: center;
 
             img {
@@ -120,7 +125,7 @@ main {
         color: black;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(45vh, 1fr));
-        gap: 1rem;
+        gap: 2rem;
 
         div {
             display: flex;
@@ -161,11 +166,11 @@ main {
     border-radius: 0.313rem;
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    padding: 0 1.563rem;
+    padding: 0 1.25rem;
     cursor: pointer;
     display: flex;
     align-items: center;
-    color: rgb(211, 211, 211);
+    color: rgba(255, 255, 255, 0.91);
 
     img {
         height: 1.5rem;
@@ -174,6 +179,7 @@ main {
 
     .down {
         margin-left: auto;
+        padding-left: 0.125rem;
         height: 1rem;
         width: 1rem;
     }
@@ -194,11 +200,13 @@ li {
 .button:hover, button:hover {
     background-color: rgba(255, 255, 255, 0.137);
     color: white;
+    text-decoration: none;
 }
 
 .button:hover, button:hover {
     background-color: rgba(255, 255, 255, 0.137);
     color: white;
+    text-decoration: none;
 }
 
 #readmore {
@@ -209,18 +217,80 @@ li {
 }
 
 label {
-    position: relative;
-    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: black solid 2px;
+    color: black;
+    display: flex;
+    padding: 0 1.563rem;
     cursor: pointer;
-    background-color: rgb(227, 227, 227);
+    border-radius: 0.625rem;
+    text-align: center;
+
+    font-weight: 500;
+    height: 3.125rem;
+    align-items: center;
+}
+
+.read {
+    margin-bottom: 0;
+    div {
+        max-height: 60vh;
+        overflow: hidden;
+        button:last-child {
+            background-color: rgba(0, 0, 0, 0);
+            border: #1B1B20 solid;
+            color: #1B1B20;
+            img {
+                filter: invert(100%);
+            }
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        button {
+            background-color: #1B1B20;
+            color: rgb(255, 255, 255);
+            margin: 0 0.75rem 0.75rem 0;
+            img {
+                filter: none;
+            }
+        }
+        p:nth-child(5) {
+            background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0vh, rgba(255, 255, 255, 1) 20vh);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            a {
+                color: transparent;
+            }
+        }
+    }
 }
 
 input[type="checkbox"]:checked ~ label {
     display: none;
 }
 
-.readingmore:has(~ input[type="checkbox"]:checked) {
-    display: block;
+input[type="checkbox"]:checked ~ label {
+    display: none;
+}
+
+.read:has(~ input[type="checkbox"]:checked) {
+    p {
+        color: black;
+    }
+    a {
+    color: #0025C8;
+    }
+    div {
+        max-height: none;
+        
+    }
+    .readingmore {
+        display: block;
+    }
 }
 
 /* wrapper for the sticky nav bar, this is the only way I could get it to float */
@@ -253,32 +323,9 @@ input[type="checkbox"]:checked ~ label {
             font-family: Montserrat, sans-serif;
             font-weight: 600;
             font-size: 1.1rem;
-        }
-
-        span {
-            padding: 0;
-            margin: 0;
-
-            a {
-                padding-right: 0.313rem;
-                border-radius: 0.313rem 0 0 0.313rem;
+            img:first-child {
+                margin-right: 0.5rem;
             }
-
-            button {
-                padding-right: 0.938rem;
-                padding-left: 0.188rem;
-                border-radius: 0 0.313rem 0.313rem 0;
-            }
-
-            a:hover, button:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-                color: white;
-            }
-        }
-
-        > span:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white
         }
     }
 
@@ -334,7 +381,7 @@ input[type="checkbox"]:checked ~ label {
         border-radius: 0.313rem;
         border: none;
         background-color: rgba(255, 255, 255, 0);
-        padding: 0.313rem 0.625rem;
+        padding: 1.25rem 1rem;
         cursor: pointer;
         color: rgb(211, 211, 211);
     }
@@ -342,6 +389,7 @@ input[type="checkbox"]:checked ~ label {
     .button:hover, button:hover {
             background-color: rgba(255, 255, 255, 0.137);
             color: white;
+            text-decoration: none;
         }
     
     }
@@ -352,7 +400,7 @@ input[type="checkbox"]:checked ~ label {
     position-area: bottom span-right;
     min-width: max-content;
     margin: initial;
-    transform: translate(-2.188rem, 0.625rem);
+    transform: translate(-0.4rem, 0.625rem);
 }
 
 #downloads {
@@ -435,10 +483,10 @@ input[type="checkbox"]:checked ~ label {
 
         a {
             font-weight: 600;
-            color: rgb(161, 188, 232);
+            color: #A5D8FF;
         }
 
-        .button {
+        .button:last-child {
             background-color: white;
             color: rgb(33, 33, 33);
             img {
@@ -446,18 +494,19 @@ input[type="checkbox"]:checked ~ label {
             }
         }
 
-        .button:first-child {
+        .button {
             background-color: rgba(0, 0, 0, 0);
             border: white solid;
             color: white;
-            img {
-                filter: none;
-            }
         }
 
         .button:hover {
             background-color: rgb(232, 232, 232);
             color: black;
+            text-decoration: none;
+            img {
+                filter: invert(100%);
+            }
         }
 
         div {
@@ -517,7 +566,7 @@ input[type="checkbox"]:checked ~ label {
 
 /* Media queries for tablet */
 
-@media (max-width: 750px) {
+@media (max-width: 888px) {
     
     .hideOnTablet {
         display: none;
@@ -564,6 +613,10 @@ input[type="checkbox"]:checked ~ label {
         height: 90vh;
     }
 
+    .read:has(~ input[type="checkbox"]:checked) .hideOnTablet {
+            display: none;
+        }
+
 
     /* Making images smaller and reversing the flex direction to display image for text */
 
@@ -588,7 +641,7 @@ input[type="checkbox"]:checked ~ label {
 
 /* Media query for mobile */
 
-@media (max-width: 425px) {
+@media (max-width: 395px) {
     .hideOnMobile {
         display: none;
     }
