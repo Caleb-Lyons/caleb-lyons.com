@@ -45,14 +45,14 @@ main a:hover {
 
 h2 {
     font-family: Montserrat, sans-serif;
-    font-weight: "600";
+    font-weight: 600;
     padding-bottom: 0.5rem;
     font-size: 2.30rem;
 }
 
 h3 {
     margin-top: 2.5rem;
-    font-size: 0.95;
+    font-size: 0.95rem;
     font-weight: 600;
     max-width: fit-content;
 }
@@ -90,6 +90,9 @@ main {
     max-width: 65rem;
     width: 100%;
     align-self: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     justify-self: center;
 
     > div {
