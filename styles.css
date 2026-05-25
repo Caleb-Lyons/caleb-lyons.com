@@ -121,7 +121,7 @@ main {
     .projectcards div {
         color: black;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(45vh, 1fr));
         gap: 2rem;
 
         div {
@@ -141,6 +141,7 @@ main {
 
             div {
                 opacity: 0;
+                background-color: rgba(255, 255, 255, 0.5);
                 position: absolute;
                 inset: 0;
                 display: flex;
@@ -174,7 +175,6 @@ main {
         }
     }
 }  
-
 
 /* button and <a> links disguised as buttons get the same styling */
 
@@ -529,7 +529,7 @@ input[type="checkbox"]:checked ~ label {
         }
 
         .button {
-            background-color: rgba(0, 0, 0, 0);
+            background-color: #1B1B20;
             border: white solid;
             color: white;
         }
@@ -614,6 +614,10 @@ input[type="checkbox"]:checked ~ label {
         display: inline;
     }
     
+
+    .projectcards div {
+        grid-template-columns: repeat(auto-fit, auto);
+    }
 
     /* Changing the contact me popover that nests underneath my name to pop down instead of right. So that it doesn't overflow out of the page on smaller screens */
 
