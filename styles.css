@@ -577,7 +577,7 @@ input[type="checkbox"]:checked ~ label {
 /* Styling for any project pages, like the Colorado one */
 
 .project {
-    background-color: rgb(43, 43, 50);
+    background-color: rgb(20, 20, 21);
     margin-top: calc(4vw + 3rem);
     overflow-x: hidden;
 
@@ -593,6 +593,143 @@ input[type="checkbox"]:checked ~ label {
             width: 100%;
             height: fit-content;
             max-width: 150vh;
+        }
+    }
+}
+
+.project:has(#book) {
+    margin: calc(4vw + 3rem) 2vw 0 2vw;
+
+    main {
+        max-width: none;
+
+        #next-btn, #prev-btn {
+            position: absolute;
+            position-anchor: --book;
+            position-area: left center;
+            translate: 150%;
+            padding: 0;
+            margin: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            max-inline-size: none;
+            z-index: 999;
+            box-shadow: 0 0.0 0.625rem 0 rgba(0, 0, 0, 0.5);
+            transition: 0.075s;
+
+            
+            img {
+                width: 40px;
+                height: 40px;
+                max-width: none;
+            }
+        }
+
+        #next-btn {
+            position-area: right center;
+            translate: -150%;
+            rotate: 180deg;
+        }
+        
+        #next-btn:hover, #prev-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        #next-btn:active, #prev-btn:active {
+            transform: scale(1.1);
+        }
+
+        #book {
+            aspect-ratio: 2.828 / 1;
+            anchor-name: --book;
+            margin-top: 25vh;
+            align-items: flex-end;
+            
+        
+            .paper {
+                margin: 0;
+                padding: 0;
+                gap: 0;
+                width: 48vw;
+                aspect-ratio: 1.414 / 1;
+                position: absolute;
+
+
+                    img {
+                    position: absolute;
+                    transform-origin: left;
+                    aspect-ratio: 1.414 / 1;
+                    transition: transform 0.5s;
+                    border-radius: 0;
+                    }
+                    img:last-child {
+                        z-index: -1;
+                    }
+                }
+            
+                #g00 {
+                    z-index: 18;
+                }
+                #g01 {
+                    z-index: 17;
+                }
+                #g02 {
+                    z-index: 16;
+                }
+                #g03 {
+                    z-index: 15;
+                }
+                #g04 {
+                    z-index: 14;
+                }
+                #g05 {
+                    z-index: 13;
+                }
+                #g06 {
+                    z-index: 12;
+                }
+                #g07 {
+                    z-index: 11;
+                }
+                #g08 {
+                    z-index: 10;
+                }
+                #g09 {
+                    z-index: 9;
+                }
+                #g10 {
+                    z-index: 8;
+                }
+                #g11 {
+                    z-index: 7;
+                }
+                #g12 {
+                    z-index: 6;
+                }
+                #g13 {
+                    z-index: 5;
+                }
+                #g14 {
+                    z-index: 4;
+                }
+                #g15 {
+                    z-index: 3;
+                }
+                #g16 {
+                    z-index: 2;
+                }
+                #g17 {
+                    z-index: 1;
+                }
+        }
+
+        .flipped>:first-child, .flipped>:last-child {
+            transform: rotateY(-180deg);
+        }
+
+        img:first-child {
+            backface-visibility: hidden;
         }
     }
 }
@@ -682,7 +819,7 @@ input[type="checkbox"]:checked ~ label {
 
 /* Media query for mobile */
 
-@media (max-width: 395px) {
+@media (max-width: 450px) {
     .hideOnMobile {
         display: none;
     }
@@ -705,17 +842,29 @@ input[type="checkbox"]:checked ~ label {
 
         main {
             height: 100%;
+            width: 100%;
             margin: 0 0 5rem 0;
 
-            > div {
+            div {
                 height: 100%;
+                width: 100%;
                 flex-direction: row;
                 overflow-x: scroll;
+                position: relative;
+                aspect-ratio: unset;
+                transform: unset;
+                translate: unset;
+
+                >div {
+                    overflow-x: visible;
+                }
 
                 img {
                     width: 100vh;
                     height: min-content;
                     max-height: 80%;
+                    position: relative;
+                    aspect-ratio: unset;
                 }
 
                 :first-child {
@@ -728,4 +877,14 @@ input[type="checkbox"]:checked ~ label {
             }
         }
     }
+
+
+    #book img {
+            margin-top: 5vh;
+            width: 96vw;
+            translate: 22.5%;
+    }
+    
+
+
 }

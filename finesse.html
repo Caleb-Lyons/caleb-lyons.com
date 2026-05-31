@@ -11,9 +11,10 @@
   <link rel="icon" type="image/png" href="Icons/favicon-32light.png" sizes="32x32" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="Icons/favicon-16dark.png" sizes="16x16" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="Icons/favicon-32dark.png" sizes="32x32" media="(prefers-color-scheme: dark)">
+  <script src="./main.js" defer></script>
 </head>
 
-<body class="project">
+<body class="project book">
 
 
   <!-- Nav bar in a lot of divs (the only way I could get it to float off of the edges, be responsive, and be sticky) -->
@@ -85,41 +86,97 @@
 
     <!-- A thousand images -->
 
-    <div>
-      <img src="Images/Finesse/01.jpg" loading="lazy">
-      <img src="Images/Finesse/1.jpg" loading="lazy">
-      <img src="Images/Finesse/2.jpg" loading="lazy">
-      <img src="Images/Finesse/3.jpg" loading="lazy">
-      <img src="Images/Finesse/4.jpg" loading="lazy">
-      <img src="Images/Finesse/5.jpg" loading="lazy">
-      <img src="Images/Finesse/6.jpg" loading="lazy">
-      <img src="Images/Finesse/7.jpg" loading="lazy">
-      <img src="Images/Finesse/8.jpg" loading="lazy">
-      <img src="Images/Finesse/9.jpg" loading="lazy">
-      <img src="Images/Finesse/10.jpg" loading="lazy">
-      <img src="Images/Finesse/11.jpg" loading="lazy">
-      <img src="Images/Finesse/12.jpg" loading="lazy">
-      <img src="Images/Finesse/13.jpg" loading="lazy">
-      <img src="Images/Finesse/14.jpg" loading="lazy">
-      <img src="Images/Finesse/15.jpg" loading="lazy">
-      <img src="Images/Finesse/16.jpg" loading="lazy">
-      <img src="Images/Finesse/17.jpg" loading="lazy">
-      <img src="Images/Finesse/18.jpg" loading="lazy">
-      <img src="Images/Finesse/19.jpg" loading="lazy">
-      <img src="Images/Finesse/20.jpg" loading="lazy">
-      <img src="Images/Finesse/21.jpg" loading="lazy">
-      <img src="Images/Finesse/22.jpg" loading="lazy">
-      <img src="Images/Finesse/23.jpg" loading="lazy">
-      <img src="Images/Finesse/24.jpg" loading="lazy">
-      <img src="Images/Finesse/25.jpg" loading="lazy">
-      <img src="Images/Finesse/26.jpg" loading="lazy">
-      <img src="Images/Finesse/27.jpg" loading="lazy">
-      <img src="Images/Finesse/28.jpg" loading="lazy">
-      <img src="Images/Finesse/29.jpg" loading="lazy">
-      <img src="Images/Finesse/30.jpg" loading="lazy">
-      <img src="Images/Finesse/31.jpg" loading="lazy">
-      <img src="Images/Finesse/32.jpg" loading="lazy">
+    <button id="prev-btn">
+      <img src="Icons/arrow.svg" alt="previous page">
+    </button>
+
+    <div id="book">
+      
+      <div id="g00" class="paper">
+        <img src="Images/Finesse/Front.jpg" loading="lazy">
+        <img src="Images/Finesse/White.jpg" loading="lazy">
+      </div>
+      <div id="g01" class="paper">
+        <img src="Images/Finesse/1.jpg" loading="lazy">
+        <img src="Images/Finesse/2.jpg" loading="lazy">
+      </div>
+      <div id="g02" class="paper">
+        <img src="Images/Finesse/3.jpg" loading="lazy">
+        <img src="Images/Finesse/4.jpg" loading="lazy">
+      </div>
+      <div id="g03" class="paper">
+        <img src="Images/Finesse/5.jpg" loading="lazy">
+        <img src="Images/Finesse/6.jpg" loading="lazy">
+      </div>
+      <div id="g04" class="paper">
+        <img src="Images/Finesse/7.jpg" loading="lazy">
+        <img src="Images/Finesse/8.jpg" loading="lazy">
+      </div>
+      <div id="g05" class="paper">
+        <img src="Images/Finesse/9.jpg" loading="lazy">
+        <img src="Images/Finesse/10.jpg" loading="lazy">
+      </div>
+      <div id="g06" class="paper">
+        <img src="Images/Finesse/11.jpg" loading="lazy">
+        <img src="Images/Finesse/12.jpg" loading="lazy">
+      </div>
+      <div id="g07" class="paper">
+        <img src="Images/Finesse/13.jpg" loading="lazy">
+        <img src="Images/Finesse/14.jpg" loading="lazy">
+      </div>
+      <div id="g08" class="paper">
+        <img src="Images/Finesse/15.jpg" loading="lazy">
+        <img src="Images/Finesse/16.jpg" loading="lazy">
+      </div>
+      <div id="g09" class="paper">
+        <img src="Images/Finesse/17.jpg" loading="lazy">
+        <img src="Images/Finesse/18.jpg" loading="lazy">
+      </div>
+      <div id="g10" class="paper">
+        <img src="Images/Finesse/19.jpg" loading="lazy">
+        <img src="Images/Finesse/20.jpg" loading="lazy">
+      </div>
+      <div id="g11" class="paper">
+        <img src="Images/Finesse/21.jpg" loading="lazy">
+        <img src="Images/Finesse/22.jpg" loading="lazy">
+      </div>
+      <div id="g12" class="paper">
+        <img src="Images/Finesse/23.jpg" loading="lazy">
+        <img src="Images/Finesse/24.jpg" loading="lazy">
+      </div>
+      <div id="g13" class="paper">
+        <img src="Images/Finesse/25.jpg" loading="lazy">
+        <img src="Images/Finesse/26.jpg" loading="lazy">
+      </div>
+      <div id="g14" class="paper">
+        <img src="Images/Finesse/27.jpg" loading="lazy">
+        <img src="Images/Finesse/28.jpg" loading="lazy">
+      </div>
+      <div id="g15" class="paper">
+        <img src="Images/Finesse/29.jpg" loading="lazy">
+        <img src="Images/Finesse/30.jpg" loading="lazy">
+      </div>
+      <div id="g16" class="paper">
+        <img src="Images/Finesse/31.jpg" loading="lazy">
+        <img src="Images/Finesse/32.jpg" loading="lazy">
+      </div>
+      <div id="g17" class="paper">
+        <img src="Images/Finesse/33.jpg" loading="lazy">
+        <img src="Images/Finesse/34.jpg" loading="lazy">
+      </div>
+      <div id="g18" class="paper">
+        <img src="Images/Finesse/White.jpg" loading="lazy">
+        <img src="Images/Finesse/Back.jpg" loading="lazy">
+      </div>
+
+
+      
     </div>
+
+    <button id="next-btn">
+      <img src="Icons/arrow.svg" alt="next page">
+    </button>
+
   </main>
 </body>
 </html>
