@@ -643,7 +643,7 @@ input[type="checkbox"]:checked ~ label {
         #book {
             aspect-ratio: 2.828 / 1;
             anchor-name: --book;
-            margin-top: 25vh;
+            margin-top: 20vh;
             align-items: flex-end;
             
         
