@@ -34,7 +34,7 @@ gsap.timeline()
 
 
 Draggable.create('#dragger', {
-  
+
   onDragStart:(e)=>{ 
     if (e.touches) e.clientX = e.touches[0].clientX;
     pos.x = Math.round(e.clientX);
@@ -44,7 +44,7 @@ Draggable.create('#dragger', {
     if (e.touches) e.clientX = e.touches[0].clientX;    
     
     gsap.to('#cube', {
-      rotationY: '+=' +( (Math.round(e.clientX)-pos.x)%360 ),
+      rotationY: '+=' +( (Math.round(e.clientX)-pos.x)%360 )*1.5,
       onUpdate: () => {
         gsap.set('.face', { 
           opacity: (i) => {

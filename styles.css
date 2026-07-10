@@ -630,7 +630,7 @@ input[type="checkbox"]:checked ~ label {
 }
 
 html:has(#box), body:has(#box) {
-    overflow-y: none;
+    overflow-y: hidden;
     height: 100%;
     margin: 0;
 }
@@ -656,27 +656,27 @@ html:has(#box), body:has(#box) {
     
     .front {
         background-image: url(Images/Copperpot/Box_Front.jpg);
-        width: 55vh;
+        width: 55dvh;
     }
     
     .right {
         background-image: url(Images/Copperpot/Box_Right.jpg);
-        width: 27.5vh;
+        width: 27.5dvh;
     }
     
     .back {
         background-image: url(Images/Copperpot/Box_Back.jpg);
-        width: 55vh;
+        width: 55dvh;
     }
     
     .left {
         background-image: url(Images/Copperpot/Box_Left.jpg);
-        width: 27.5vh;
+        width: 27.5dvh;
     }
     
     .container {
-        width: 55vh;
-        height: 75vh;
+        width: 55dvh;
+        height: 75dvh;
         perspective: 1500px;
         left:50%;
         top:50%;
