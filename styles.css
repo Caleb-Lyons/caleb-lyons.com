@@ -14,6 +14,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 html {
@@ -166,6 +167,7 @@ main {
                 }
             }
         }
+        
         div:hover {
 
             img {
@@ -336,7 +338,7 @@ input[type="checkbox"]:checked ~ label {
     top: 0;
     padding: 2vw 3vw;
     color: white;
-    z-index: 999;
+    z-index: 1025;
 
     div {
         padding: 0.313rem;
@@ -627,6 +629,61 @@ input[type="checkbox"]:checked ~ label {
     }
 }
 
+html:has(#box), body:has(#box) {
+    overflow-y: none;
+    height: 100%;
+    margin: 0;
+}
+
+#box {
+    
+    #dragger, #cube, .face {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    div {
+        position: absolute;
+    }
+
+    .face {
+        background-color: #CC954E;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .front {
+        background-image: url(Images/Copperpot/Box_Front.jpg);
+        width: 55vh;
+    }
+    
+    .right {
+        background-image: url(Images/Copperpot/Box_Right.jpg);
+        width: 27.5vh;
+    }
+    
+    .back {
+        background-image: url(Images/Copperpot/Box_Back.jpg);
+        width: 55vh;
+    }
+    
+    .left {
+        background-image: url(Images/Copperpot/Box_Left.jpg);
+        width: 27.5vh;
+    }
+    
+    .container {
+        width: 55vh;
+        height: 75vh;
+        perspective: 1500px;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }
+}
+
 .project:has(#book) {
     margin: calc(4vw + 3rem) 2vw 0 2vw;
 
@@ -764,7 +821,6 @@ input[type="checkbox"]:checked ~ label {
     }
 }
 
-
 .showOnMobile, .showOnTablet, .readingmore {
     display: none;
 }
@@ -838,6 +894,12 @@ input[type="checkbox"]:checked ~ label {
         div div {
             flex-direction: column-reverse;
         }
+        #box div {
+            flex-direction: initial;
+        }
+        #box .container {
+            zoom: 0.75;
+        }
     }
 
     .projectcards div div div {
@@ -904,9 +966,13 @@ input[type="checkbox"]:checked ~ label {
                     margin-right: 4vw;
                 }
             }
-        }
+        } 
     }
 
+    #box div {
+        margin: 0;
+        overflow-x: visible;
+    }
 
     #book img {
             margin-top: 5vh;

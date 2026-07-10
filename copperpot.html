@@ -5,15 +5,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caleb Lyons: Redesigning Colorado</title>
+  <title>Caleb Lyons: Copperpot Packaging Design</title>
   <link href="styles.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/png" href="Icons/favicon-16light.png" sizes="16x16" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="Icons/favicon-32light.png" sizes="32x32" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="Icons/favicon-16dark.png" sizes="16x16" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="Icons/favicon-32dark.png" sizes="32x32" media="(prefers-color-scheme: dark)">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+  <script src="./box.js" defer></script>
 </head>
 
-<body class="project">
+<body class="project box">
 
 
   <!-- Nav bar in a lot of divs (the only way I could get it to float off of the edges, be responsive, and be sticky) -->
@@ -51,7 +54,7 @@
     <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper ( 8.5x11 in )</a></li>
   </ul></div>
 
-    <div class="menu" id="contacts" popover><ul>
+  <div class="menu" id="contacts" popover><ul>
     <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;me@caleb-lyons.com</button></li>
     <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</button></li>
     <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;&nbsp;LinkedIn</a></li>
@@ -79,33 +82,18 @@
 
 
   <!-- Finally the <main> -->
+   <main id="box">
 
-  <main>
-    
-
-    <!-- A thousand images -->
-
-    <div>
-      <img src="Images/Colorado/1.jpg" loading="lazy">
-      <img src="Images/Colorado/2.jpg" loading="lazy">
-      <img src="Images/Colorado/3.jpg" loading="lazy">
-      <img src="Images/Colorado/4.jpg" loading="lazy">
-      <img src="Images/Colorado/5.jpg" loading="lazy">
-      <img src="Images/Colorado/6.jpg" loading="lazy">
-      <img src="Images/Colorado/7.jpg" loading="lazy">
-      <img src="Images/Colorado/8.jpg" loading="lazy">
-      <img src="Images/Colorado/9.jpg" loading="lazy">
-      <img src="Images/Colorado/10.jpg" loading="lazy">
-      <img src="Images/Colorado/11.jpg" loading="lazy">
-      <img src="Images/Colorado/12.jpg" loading="lazy">
-      <img src="Images/Colorado/13.jpg" loading="lazy">
-      <img src="Images/Colorado/14.jpg" loading="lazy">
-      <img src="Images/Colorado/15.jpg" loading="lazy">
-      <img src="Images/Colorado/16.jpg" loading="lazy">
-      <img src="Images/Colorado/17.jpg" loading="lazy">
-      <img src="Images/Colorado/18.jpg" loading="lazy">
-      <img src="Images/Colorado/19.jpg" loading="lazy">
-    </div>
-  </main>
+     <div class="container" >
+       <div id="cube">
+         <div class="face front"></div>
+         <div class="face right"></div>
+         <div class="face back"></div>
+         <div class="face left"></div>
+        </div>
+      </div>
+      <div id="dragger"></div>
+      
+    </main> 
 </body>
 </html>
