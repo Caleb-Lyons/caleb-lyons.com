@@ -35,6 +35,8 @@ gsap.timeline()
 
 Draggable.create('#dragger', {
 
+  intertia: true,
+
   onDragStart:(e)=>{ 
     if (e.touches) e.clientX = e.touches[0].clientX;
     pos.x = Math.round(e.clientX);

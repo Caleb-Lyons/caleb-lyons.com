@@ -898,7 +898,7 @@ html:has(#box), body:has(#box) {
             flex-direction: initial;
         }
         #box .container {
-            zoom: 0.75;
+            zoom: 0.85;
         }
     }
 
