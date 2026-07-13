@@ -417,7 +417,7 @@ input[type="checkbox"]:checked ~ label {
 
 /* The popover menu itself */
 
-.menu {
+.menu:popover-open {
     width: fit-content;
     height: fit-content;
     padding: 0.313rem;
@@ -427,6 +427,15 @@ input[type="checkbox"]:checked ~ label {
     background-color: rgba(0, 0, 0, 0.646);
     backdrop-filter: blur(0.625rem);
     overflow: hidden;
+    scale: 1 1;
+    opacity: 1;
+    transition: scale 100ms ease, opacity 200ms ease;
+    transform-origin: top;
+
+    @starting-style {
+        scale: 1 0;
+        opacity: 0;
+    }
 
     .button, button {
         overflow: hidden;
