@@ -196,6 +196,7 @@ main {
     width: 100%;
     height: 100%;
     overflow: show;
+    transition: zoom 200ms ease-in-out;
 
     .appear {
         background-color: #ffcb6acf;
@@ -217,7 +218,6 @@ main {
             box-sizing: border-box;
             backface-visibility: hidden;
             background-size: cover;
-            transition: 200ms ease-in-out;
             background-color: #924018;
         }
     }
@@ -259,15 +259,7 @@ main {
 }
 
 .hoverbox:hover {
-    #front{
-        transform: translateZ(80px);
-    }
-    #top {
-        transform: rotateX(90deg) translateZ(60.5px) translateY(20px);
-    }
-    #bottom{
-        transform: rotateX(-90deg) translateZ(269.5px) translateY(-20px);
-    }
+    zoom: 1.02;
 }
 
 /* button and <a> links disguised as buttons get the same styling */
