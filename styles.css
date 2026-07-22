@@ -122,25 +122,25 @@ main {
     .projectcards div {
         color: black;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(45vh, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 0.5rem;
+        overflow: hidden;
 
         div {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
             position: relative;
-            overflow: hidden;
+            aspect-ratio: initial;
 
             img {
-                aspect-ratio: 1 / 1;
                 width: 100%;
                 height: 100%;
                 z-index: -1;
                 transition: 200ms ease-in-out;
             }
 
-            div {
+            .appear {
                 opacity: 0;
                 background-color: rgba(255, 255, 255, 0.5);
                 position: absolute;
@@ -175,12 +175,101 @@ main {
                 transform: scale(1.02);
             }
 
-            div {
+            .appear {
                 opacity: 1;
             }
         }
     }
 }  
+
+.projectcards .hoverbox {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1B120E;
+    background: linear-gradient(180deg, rgba(27, 18, 14, 1) 35%, rgb(55, 27, 13) 100%);
+    position: relative;
+    width: 220px;
+    height: 300px;
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+    overflow: show;
+
+    .appear {
+        background-color: #ffcb6acf;
+    }
+
+    .cube {
+        display: block;
+        width: 242px;
+        height: 330px;
+        transform-style: preserve-3d;
+        overflow: visible;
+        max-inline-size: none;
+
+        .side{
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            display: block;
+            box-sizing: border-box;
+            backface-visibility: hidden;
+            background-size: cover;
+            transition: 200ms ease-in-out;
+            background-color: #924018;
+        }
+    }
+    
+    #front {
+        transform: translateZ(60.5px);
+        background-image: url(Images/Copperpot/Mobile_Front.webp);
+        background-color: #CC954E;
+    }
+
+    #right {
+        width: 121px;
+        transform: rotateY(90deg) translateZ(181px);
+        background-image: url(Images/Copperpot/Mobile_Right.webp);
+    }
+    
+    #back {
+        transform: rotateY(-180deg) translateZ(60.5px);
+    }
+    
+    #left {
+        width: 121px;
+        transform: rotateY(-90deg) translateZ(60.5px);
+        background-image: url(Images/Copperpot/Mobile_Left.webp);
+    }
+
+    #top {
+        height: 121px;
+        transform: rotateX(90deg) translateZ(60.5px);
+        background-image: url(Images/Copperpot/Mobile_Top.webp);
+    }
+
+    #bottom {
+        height: 121px;
+        transform: rotateX(-90deg) translateZ(269.5px);
+        background-image: url(Images/Copperpot/Mobile_Bottom.webp)
+    }
+
+}
+
+.hoverbox:hover {
+    #front{
+        transform: translateZ(80px);
+    }
+    #top {
+        transform: rotateX(90deg) translateZ(60.5px) translateY(20px);
+    }
+    #bottom{
+        transform: rotateX(-90deg) translateZ(269.5px) translateY(-20px);
+    }
+}
 
 /* button and <a> links disguised as buttons get the same styling */
 
@@ -525,8 +614,9 @@ input[type="checkbox"]:checked ~ label {
     height: 101vh;
     background-image: 
         url(Images/noise.gif),
-        url(Images/placeholder.jpg);
+        url(Images/placeholder.svg);
     background-repeat: repeat, no-repeat;
+    background-color: #131315;
     background-size: 600px, cover;
     background-position: center;
     background-blend-mode:color-dodge, normal;
@@ -648,7 +738,7 @@ input[type="checkbox"]:checked ~ label {
 }
 
 html:has(#box), body:has(#box) {
-    overflow-y: hidden;
+    overflow: hidden;
     height: 100%;
     margin: 0;
 }
@@ -673,22 +763,22 @@ html:has(#box), body:has(#box) {
     }
     
     .front {
-        background-image: url(Images/Copperpot/Box_Front.jpg);
+        background-image: url(Images/Copperpot/Front.webp);
         width: 55dvh;
     }
     
     .right {
-        background-image: url(Images/Copperpot/Box_Right.jpg);
+        background-image: url(Images/Copperpot/Right.webp);
         width: 27.5dvh;
     }
     
     .back {
-        background-image: url(Images/Copperpot/Box_Back.jpg);
+        background-image: url(Images/Copperpot/Back.webp);
         width: 55dvh;
     }
     
     .left {
-        background-image: url(Images/Copperpot/Box_Left.jpg);
+        background-image: url(Images/Copperpot/Left.webp);
         width: 27.5dvh;
     }
     
@@ -854,11 +944,6 @@ html:has(#box), body:has(#box) {
     .showOnTablet {
         display: inline;
     }
-    
-
-    .projectcards div {
-        grid-template-columns: repeat(auto-fit, auto);
-    }
 
     /* Changing the contact me popover that nests underneath my name to pop down instead of right. So that it doesn't overflow out of the page on smaller screens */
 
@@ -987,10 +1072,29 @@ html:has(#box), body:has(#box) {
         } 
     }
 
-    #box div {
-        margin: 0;
-        overflow-x: visible;
+    #box {
+        .front {
+            background-image: url(Images/Copperpot/Mobile_Front.webp);
+        }
+        
+        .right {
+            background-image: url(Images/Copperpot/Mobile_Right.webp);
+        }
+        
+        .back {
+            background-image: url(Images/Copperpot/Mobile_Back.webp);
+        }
+        
+        .left {
+            background-image: url(Images/Copperpot/Mobile_Left.webp);
+        }        
+
+        div {
+            margin: 0;
+            overflow-x: visible;
+        }
     }
+
 
     #book img {
             margin-top: 5vh;
