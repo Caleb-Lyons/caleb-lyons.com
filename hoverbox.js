@@ -3,7 +3,7 @@ let cube = document.querySelector('.cube');
 let cubeSide = document.querySelectorAll('.side');
 
 let rotationForce = 0.04;
-let scrollForce = 0.1; 
+let scrollForce = 0.08; 
 
 let mouse = {
     x: window.innerWidth / 2,
