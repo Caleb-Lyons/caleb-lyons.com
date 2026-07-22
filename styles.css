@@ -87,7 +87,7 @@ but I found it to be a really handy way to organize my code.  */
 /* Default div grouping for all pages */
 
 main {
-    max-width: 80rem;
+    max-width: max(80rem, 75vw);
     width: 100%;
     align-self: center;
     align-items: center;
