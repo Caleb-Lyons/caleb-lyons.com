@@ -53,7 +53,7 @@ h2 {
 
 h3 {
     margin-top: 2.5rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     max-width: fit-content;
 }
@@ -64,9 +64,9 @@ h3:first-child {
 
 p {
     font-family: WorkSans, "WorkSans", sans-serif;
-    line-height: calc(1.1rem * 1.85);
+    line-height: calc(0.95rem * 1.85);
     margin: 0.75rem 0;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     max-width: 50rem;
 }
 
@@ -122,7 +122,7 @@ main {
     .projectcards div {
         color: black;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(32vw, 1fr));
         gap: 0.5rem;
         overflow: hidden;
 
@@ -141,7 +141,6 @@ main {
 
             .appear {
                 opacity: 0;
-                background-color: rgba(255, 255, 255, 0.5);
                 position: absolute;
                 inset: 0;
                 display: flex;
@@ -150,7 +149,6 @@ main {
                 margin: 0;
                 align-self: end;
                 transition: 200ms ease-in-out;
-                backdrop-filter: blur(5rem);
                 height: fit-content;
 
                 h3 {
@@ -164,6 +162,7 @@ main {
                     rotate: 180deg;
                     filter: invert(1);
                     z-index: -1;
+                    z-index: 2;
                 }
             }
         }
@@ -176,7 +175,6 @@ main {
 
             .appear {
                 opacity: 1;
-                zoom: 1.02;
             }
         }
     }
@@ -196,14 +194,10 @@ main {
     perspective: 1000px;
     width: 100%;
     height: 100%;
-    overflow: show;
-    transition: 200ms ease-in-out;
+    overflow: visible;
+    transition: zoom 200ms ease-in-out;
+    overflow: hidden;
 
-    .appear {
-        background-color: #ffcb6acf;
-        transition: 200ms ease-in-out;
-        
-    }
 
     .cube {
         display: block;
@@ -212,6 +206,7 @@ main {
         transform-style: preserve-3d;
         overflow: visible;
         max-inline-size: none;
+        zoom: calc(max(33vw, min(45vw, calc(39.75rem - 3vw))) / 420px);
 
         .side{
             position: absolute;
@@ -378,7 +373,7 @@ label:hover .button {
         img {
             border-radius: 0;
             padding-top: 1rem;
-            height: fit-content;
+            height: 80vh;
         }
         img:first-child {
             padding: 0;
@@ -978,6 +973,18 @@ html:has(#box), body:has(#box) {
         display: inline;
     }
 
+    .projectcards>div {
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)) !important;
+        
+        a>div {
+            padding-bottom: 3rem;
+        }
+        .appear {
+            min-height: 3rem;
+            opacity: 1 !important;
+        }
+    }
+
     /* Changing the contact me popover that nests underneath my name to pop down instead of right. So that it doesn't overflow out of the page on smaller screens */
 
     #contactsmobile {
@@ -1040,20 +1047,11 @@ html:has(#box), body:has(#box) {
             zoom: 0.85;
         }
     }
-
-    .appear {
-        opacity: 1 !important;
-    }
-
-    .hoverbox {
-        height: 450px !important;
-    }
-
 }
 
 /* Media query for mobile */
 
-@media (max-width: 450px) {
+@media (max-width: 605px) {
     .hideOnMobile {
         display: none;
     }
@@ -1062,11 +1060,13 @@ html:has(#box), body:has(#box) {
         display: inline;
     }
 
-    
-    /* This was hard. All of my work so far has been presented in 1920x1080 PDF presentations, which is normally fine for desktop. 
-    However, its awful for mobile users because even at max scale, they're tiny and you can see like 6 slides simutaneously.
-    The best solution I could come up with was by changing the entire page to a scroll right sort of deal, where the user is zoomed in on everthing
-    and reading everything left to right, sort of like reading a book. */
+    .hoverbox {
+        zoom: 1;
+        padding: 3rem 0 6rem 0 !important;
+        .cube {
+            zoom: calc(96vw / 400px) !important;
+        }
+    }
 
     .project {
         overflow-y: hidden;
