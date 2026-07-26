@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<!-- Caleb Lyons - 3/22/2026 - Midterm Project for HTML/CSS -->
 
 <html lang="en-us">
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Caleb Lyons: Branding, Signage, and Application</title>
+  <link rel="icon" type="image/svg" href="Icons/favicon.svg">
   <link href="styles.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/png" href="Icons/favicon-16light.png" sizes="16x16" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="Icons/favicon-32light.png" sizes="32x32" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="Icons/favicon-16dark.png" sizes="16x16" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" href="Icons/favicon-32dark.png" sizes="32x32" media="(prefers-color-scheme: dark)">
 </head>
 
 <body class="project">
-
-
-  <!-- Nav bar in a lot of divs (the only way I could get it to float off of the edges, be responsive, and be sticky) -->
 
   <div class="wrapper">
     <div>
@@ -27,9 +21,7 @@
       <button class="nav showOnMobile" popovertarget="nav"><img src="Icons/menu.svg"></button>
     </div>
   </div>
-  
 
-  <!-- All of the popover menus -->
 
   <div class="menu" id="nav" popover>
     <ul><nav><li><a href="./#Projects" class="button"><img src="Icons/back.svg">Back to Project Gallery</a></li>
@@ -64,8 +56,6 @@
   </ul></div>
 
 
-  <!-- Amatuer JS for the copy email/phone buttons -->
-
   <script>
     function copyEmail() {
         navigator.clipboard.writeText
@@ -78,12 +68,7 @@
   </script>
 
 
-  <!-- Finally the <main> -->
-
   <main>
-    
-
-    <!-- A thousand images -->
 
     <div>
       <img src="Images/Babel/1.jpg" loading="lazy">
@@ -95,6 +80,7 @@
       <img src="Images/Babel/7.jpg" loading="lazy">
       <img src="Images/Babel/8.jpg" loading="lazy">
     </div>
+    
   </main>
 </body>
 </html>

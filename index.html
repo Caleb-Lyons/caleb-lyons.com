@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<!-- Caleb Lyons - 3/22/2026 - Midterm Project for HTML/CSS -->
 
 <html lang="en-us">
 <head>
+  <meta name="robots" content="noindex">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1c1b20">
   <title>Caleb Lyons</title>
+  <link rel="icon" type="image/svg" href="Icons/favicon.svg">
   <link href="styles.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/png" href="Icons/favicon-16light.png" sizes="16x16" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="Icons/favicon-32light.png" sizes="32x32" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="Icons/favicon-16dark.png" sizes="16x16" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" href="Icons/favicon-32dark.png" sizes="32x32" media="(prefers-color-scheme: dark)">
   <script src="hoverbox.js" defer></script>
 </head>
 
 <body>
-
-
-  <!-- Nav bar in a lot of divs (the only way I could get it to float off of the edges, be responsive, and be sticky) -->
 
   <div class="wrapper">
     <div>
@@ -29,9 +22,7 @@
       <button class="nav showOnMobile" popovertarget="nav"><img src="Icons/menu.svg"></button>
     </div>
   </div>
-  
 
-  <!-- All of the popover menus -->
 
   <div class="menu" id="nav" popover>
     <nav><ul><li><a href="./#Projects" class="button"><img src="Icons/project.svg">&nbsp;&nbsp;Project Gallery</a></li>
@@ -68,8 +59,6 @@
   </ul></div>
 
 
-  <!-- Amatuer JS for the copy email/phone buttons -->
-
   <script>
     function copyEmail() {
         navigator.clipboard.writeText
@@ -82,23 +71,20 @@
   </script>
 
 
-  <!-- Finally the <main> -->
-
   <main>
 
 
-    <!-- Banner splash image -->
-
+    
     <div class="banner">
+
       <div>
         <h2 id="About">Hi There!</h2>
         <p>Welcome to my website. Here, you can access my work, resume, information, and a PDF copy of my portfolio, all from the navigation bar above.</p>
         <div><a class="button" href="./#Projects">To Projects&nbsp;<img src="Icons/scroll.svg"></a><a class="button" href="./#about">To About Me<img src="Icons/scroll.svg"></a><a href="Downloads/CalebL_Portfolio.pdf" class="button hideOnMobile"><img src="Icons/download_large.svg" alt="Download Portfolio"></a></div>
       </div>
-    </div>
-    
 
-    <!-- The my work section -->
+    </div>
+
 
     <div class="projectcards">
       <h2 id="Projects">My Projects</h2>
@@ -114,7 +100,7 @@
                 <div class="side" id="left"></div>
                 <div class="side" id="right"></div>
             </div>
-            <div style="background-color: #F5BF44;" class="appear"><h3>Packaging Design: Copperpot Craft Pasta</h3><img src="Icons/back.svg"></div>
+            <div style="background-color: rgb(188, 165, 156);" class="appear"><h3>Packaging Design: Copperpot Craft Pasta</h3><img src="Icons/back.svg"></div>
           </div>
         </a>
         <a href="./finesse">
@@ -123,25 +109,22 @@
             <div style="background-color: #ffa97b;" class="appear"><h3>Finesse: Brand System Design</h3><img src="Icons/back.svg"></div>
           </div>
         </a>
-        <a href="./RMHKC">
-          <div>
-            <img src="Images/RMHKC/0.jpg" loading="lazy">
-            <div style="background-color: #ffde92;" class="appear"><h3>Strategy & Content Planning for RMHKC</h3><img src="Icons/back.svg"></div>
-          </div>
-        </a>
         <a href="./babel">
           <div>
             <img src="Images/Babel/0.jpg" loading="lazy">
             <div style="background-color: #f1f1f1;" class="appear"><h3>Event Branding, Signage, and Application</h3><img src="Icons/back.svg"></div>
           </div>
         </a>
-
+        <a href="./RMHKC">
+          <div>
+            <img src="Images/RMHKC/0.jpg" loading="lazy">
+            <div style="background-color: #ffde92;" class="appear"><h3>Strategy & Content Planning for RMHKC</h3><img src="Icons/back.svg"></div>
+          </div>
+        </a>
 
       </div>
     </div> 
-    
-
-    <!-- About me section -->
+  
 
     <div>
     <h2 id="about">About Me</h2>

@@ -1,5 +1,3 @@
-/* Caleb Lyons - 3/22/2026 */
-
 @font-face {
     font-family: Montserrat;
     src: url(Fonts/Montserrat-VariableFont_wght.ttf);
@@ -22,13 +20,9 @@ html {
     scroll-padding-top: 6rem;
 }
 
-
-/* Website is responsive for tablet and mobile */
-
-
 body {
     background-color: white;
-    margin: calc(100vh + 3rem) 4vw 30vh 4vw;
+    margin: calc(100vh + 6rem) 4vw 30vh 4vw;
     font-family: WorkSans, Tahoma, sans-serif;
     text-wrap: balance;
     text-wrap-style: pretty;
@@ -64,12 +58,11 @@ h3:first-child {
 
 p {
     font-family: WorkSans, "WorkSans", sans-serif;
-    line-height: calc(0.95rem * 1.85);
+    line-height: 1.8rem;
     margin: 0.75rem 0;
     font-size: 0.95rem;
     max-width: 50rem;
 }
-
 
 img {
     display: block;
@@ -78,13 +71,6 @@ img {
     width: 60vh;
     height: 60vh;
 }
-
-
-/* This is the first time I've done this, but apperently you can nest selectors inside of selectors? Sort of like how media queries work. 
-It's still too new to validate in the CSS Validator you gave us,
-but I found it to be a really handy way to organize my code.  */
-
-/* Default div grouping for all pages */
 
 main {
     max-width: max(80rem, 75vw);
@@ -260,8 +246,6 @@ main {
     zoom: 1.02;
 }
 
-/* button and <a> links disguised as buttons get the same styling */
-
 .button, button {
     font-family: WorkSans, "WorkSans", sans-serif;
     font-size: 1rem;
@@ -328,7 +312,7 @@ label {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    transform: translate(-2.5%, -5rem);
+    transform: translate(-2.5%, -6.75rem);
     z-index: 999;
 
     .button, button {
@@ -360,7 +344,7 @@ label:hover .button {
 .read {
     margin-bottom: 0;
     >div {
-        max-height: 60vh;
+        max-height: 65vh;
         overflow: hidden;
         background: linear-gradient(180deg,rgba(0, 0, 0, 1) 70%, rgba(255, 255, 255, 1) 100%);
         background-clip: text;
@@ -374,6 +358,8 @@ label:hover .button {
             border-radius: 0;
             padding-top: 1rem;
             height: 80vh;
+            object-position: top;
+
         }
         img:first-child {
             padding: 0;
@@ -451,8 +437,6 @@ input[type="checkbox"]:checked ~ label {
     }
 }
 
-/* wrapper for the sticky nav bar, this is the only way I could get it to float */
-
 .wrapper {
     width: 100%;
     max-width: 100vw;
@@ -499,16 +483,13 @@ input[type="checkbox"]:checked ~ label {
             min-width: max-content;
             font-family: WorkSans, "WorkSans", sans-serif;
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             img:first-child {
                 margin-right: 0.5rem;
+                height: 2rem;
             }
         }
     }
-
-
-
-    /* H1 has to go over here to overwrite the button styling. The H1 is the "Caleb Lyons" button that brings you back to the homepage */
 
     h1 {
         font-family: Montserrat, sans-serif;
@@ -516,9 +497,6 @@ input[type="checkbox"]:checked ~ label {
         font-size: 1rem;
         font-weight: 500;
     }
-
-
-    /* declaring where each popover menu should anchor-position to */ 
 
     .nav {
         anchor-name: nav;
@@ -536,9 +514,6 @@ input[type="checkbox"]:checked ~ label {
         anchor-name: exports;  
     }
 }
-
-
-/* The popover menu itself */
 
 .menu:popover-open {
     width: fit-content;
@@ -633,9 +608,6 @@ input[type="checkbox"]:checked ~ label {
     transform: translate(0.625rem, 0);
 }
 
-
-/* Splash screen banner */
-
 .banner {
     position: absolute;
     top: 0;
@@ -645,14 +617,14 @@ input[type="checkbox"]:checked ~ label {
     z-index: -1;
     width: 100vw;
     height: 101vh;
-    background-image: 
-        url(Images/noise.gif),
-        url(Images/placeholder.svg);
+    background: 
+        url(Images/nois.gif),
+        url(Images/splashpage.webp);
     background-repeat: repeat, no-repeat;
     background-color: #131315;
     background-size: 600px, cover;
-    background-position: center;
-    background-blend-mode:color-dodge, normal;
+    background-position: center right;
+    background-blend-mode:overlay, normal;
     max-width: 100%;
     display: flex;
     align-items: end;
@@ -673,10 +645,14 @@ input[type="checkbox"]:checked ~ label {
         
         h2 {
             font-size: clamp(3rem, 10vw, 5rem);
+            text-shadow: 0 0 2rem black;
         }
 
         p {
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 2.15rem;
+            text-shadow: 0 0 3px black, 0 0 3rem black;
         }
 
         a {
@@ -714,9 +690,6 @@ input[type="checkbox"]:checked ~ label {
     }
 }
 
-
-/* Hovering over buttons sometimes changes their icon, depending if they have a special action. Ex: copying */
-
 .copy:hover img {
     content: url(Icons/copy.svg);
 }
@@ -736,9 +709,6 @@ input[type="checkbox"]:checked ~ label {
 .external:hover img {
     content: url(Icons/external.svg);
 }
-
-
-/* Styling for any project pages, like the Colorado one */
 
 .project {
     background-color: #131315;
@@ -966,8 +936,6 @@ html:has(#box), body:has(#box) {
     display: none; 
 }
 
-/* Media queries for tablet */
-
 @media (max-width: 888px) {
     
     .hideOnTablet {
@@ -990,8 +958,6 @@ html:has(#box), body:has(#box) {
         }
     }
 
-    /* Changing the contact me popover that nests underneath my name to pop down instead of right. So that it doesn't overflow out of the page on smaller screens */
-
     #contactsmobile {
         position-area: bottom span-left;
         transform: translate(0.313rem, 0.625rem);
@@ -1001,9 +967,6 @@ html:has(#box), body:has(#box) {
         margin: initial;
     }
     
-
-    /* Since on table there is not ability to hover over buttons to preview what they do, the icons need to display their hover icons always */
-
     img.right {
         content: url(Icons/down.svg);
         height: 1rem;
@@ -1022,13 +985,6 @@ html:has(#box), body:has(#box) {
         content: url(Icons/external.svg);
     }
 
-    .banner {
-        height: 90vh;
-    }
-    body {
-        margin-top: calc(90vh + 3rem);
-    }
-
     .read:has(~ input[type="checkbox"]:checked) .showOnTablet {
         display: block !important;
     }
@@ -1036,8 +992,6 @@ html:has(#box), body:has(#box) {
     .read>div>img {
         aspect-ratio: 1 / 1;
     }
-
-    /* Making images smaller and reversing the flex direction to display image for text */
 
     body {
         img {
@@ -1056,8 +1010,6 @@ html:has(#box), body:has(#box) {
         }
     }
 }
-
-/* Media query for mobile */
 
 @media (max-width: 605px) {
     .hideOnMobile {
@@ -1149,7 +1101,5 @@ html:has(#box), body:has(#box) {
             width: 96vw;
             translate: 22.5%;
     }
-    
-
 
 }
