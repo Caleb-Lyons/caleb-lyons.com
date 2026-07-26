@@ -484,10 +484,16 @@ input[type="checkbox"]:checked ~ label {
             font-family: WorkSans, "WorkSans", sans-serif;
             font-weight: 500;
             font-size: 1.15rem;
+
+        /* Logo before name
+
             img:first-child {
                 margin-right: 0.5rem;
-                height: 2rem;
+                height: 1.75rem;
+                width: auto;
+
             }
+        */
         }
     }
 
@@ -639,20 +645,30 @@ input[type="checkbox"]:checked ~ label {
         flex-direction: column;
         gap: 0;
         div {
-            margin-top: 1rem;
+            margin-top: 2rem;
             flex-direction: row !important;
         }
         
         h2 {
             font-size: clamp(3rem, 10vw, 5rem);
+        }
+
+        >img {
             text-shadow: 0 0 2rem black;
+            filter: drop-shadow(0px 0px 1rem rgba(0, 0, 0, 1));
+            height: clamp(7rem, 20vw, 8rem);
+            object-fit: contain;
+            width: fit-content;
+            padding: 1rem 1rem 0 0;
         }
 
         p {
             font-weight: 600;
             font-size: 1.25rem;
             line-height: 2.15rem;
-            text-shadow: 0 0 3px black, 0 0 3rem black;
+            filter: drop-shadow(0px 0px 0.5rem rgba(0, 0, 0, 1));
+            padding-left: 0.25rem;
+            margin: 0;
         }
 
         a {
