@@ -12,60 +12,74 @@
 
 <body class="project">
 
-  <div class="wrapper">
+<div class="wrapper">
     <div>
-      <h1><button class="nav" popovertarget="nav">Caleb Lyons<img class="down hideOnMobile" src="Icons/down.svg"></button></h1>
+      <h1><a href="./#Projects" class="nav button">Caleb Lyons' Portfolio</a></h1>
+      <a class="button hideOnTablet" href="./#Projects">Projects</a>
       <a class="button hideOnTablet" href="./#about">About</a>
-      <button class="downloads hideOnTablet" popovertarget="downloads">Downloads<img class="down" src="Icons/down.svg"></button>
-      <button class="contacts hideOnMobile" popovertarget="contacts">Contacts<img class="down" src="Icons/down.svg"></button>
+      <button class="contacts hideOnMobile" popovertarget="contacts">Contact Me&nbsp;<img class="down" src="Icons/down.svg"></button>
       <button class="nav showOnMobile" popovertarget="nav"><img src="Icons/menu.svg"></button>
     </div>
   </div>
+  
 
-
-  <div class="menu" id="nav" popover>
-    <ul><nav><li><a href="./#Projects" class="button"><img src="Icons/back.svg">Back to Project Gallery</a></li>
-    <li><a href="./#about" class="button"><img src="Icons/about.svg">About</a></li>
-    <li class="hideOnTablet"><button class="exports" popovertarget="exports"><img src="Icons/export.svg">Export Portfolio as PDF<img class="right" src="Icons/right.svg"></button></li>
-    <li class="showOnTablet"><a href="Downloads/CalebL_Resume.pdf" class="button"><img src="Icons/resume.svg">My Resume</a></li>
-    <li class="showOnTablet"><a href="Downloads/CalebLyons_Portfolio.pdf" class="button"><img src="Icons/letter.svg">Portfolio PDF</a></li>
-    <li><button class="contactsmobile" popovertarget="contactsmobile"><img src="Icons/contact.svg">Contacts<img class="right" src="Icons/right.svg"></button></li>
+  <div class="menu" id="nav" popover><ul><nav>
+      <li><a href="./#Projects" class="button"><img src="Icons/project.svg">&nbsp;&nbsp;Project Gallery</a></li>
+      <li><a href="./#Projects" class="button"><img src="Icons/about.svg">&nbsp;&nbsp;About Me</a></li>
+      <hr>
+      <li class="hideOnTablet"><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;C@caleb-lyons.com</button></li>
+      <li class="hideOnTablet"><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</button></li>
+      <li class="showOnTablet"><a href="mailto:C@caleb-lyons.com" class="button" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;C@caleb-lyons.com</a></li>
+      <li class="showOnTablet"><a href="tel:+1913-302-0440" class="button" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</a></li>
+      <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;&nbsp;LinkedIn</a></li>
+      <!--
+        <li><a href="Downloads/CalebL_Resume.pdf" class="button"><img src="Icons/resume.svg">&nbsp;&nbsp;Resume PDF</a></li>
+        <li class="showOnTablet"><a href="Downloads/CalebLyons_Portfolio.pdf" class="button"><img src="Icons/letter.svg">&nbsp;&nbsp;Portfolio PDF</a></li>
+        <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Portfolio PDF</a></li>
+      -->
   </ul></nav></div>
   
-  <div class="menu" id="downloads" popover><ul>
-    <li><a href="Downloads/CalebL_Resume.pdf" class="button download" download><img src="Icons/resume.svg">My Resume</a></li>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" class="button download" download><img src="Icons/screen.svg">Digital Portfolio PDF</a></li>
-    <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">Letter Paper Portfolio PDF</a></li>
-  </ul></div>
-
-  <div class="menu" id="exports" popover><ul>
-    <li><a href="Downloads/CalebL_Portfolio.pdf" class="button download" download><img src="Icons/screen.svg">Digital Presentation ( 4K )</a></li>
-    <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">Letter Paper ( 8.5x11 in )</a></li>
-  </ul></div>
-
-    <div class="menu" id="contacts" popover><ul>
-    <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;me@caleb-lyons.com</button></li>
-    <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</button></li>
+  <div class="menu" id="contacts" popover><ul>
+    <li class="hideOnTablet"><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;C@caleb-lyons.com</button></li>
+    <li class="hideOnTablet"><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</button></li>
+    <li class="showOnTablet"><a href="mailto:C@caleb-lyons.com" class="button" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;C@caleb-lyons.com</a></li>
+    <li class="showOnTablet"><a href="tel:+1913-302-0440" class="button" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</a></li>
     <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;&nbsp;LinkedIn</a></li>
   </ul></div>
-
-  <div class="menu" id="contactsmobile" popover><ul>
-    <li><a href="mailto:me@caleb-lyons.com" class="button" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;me@caleb-lyons.com</a></li>
-    <li><a href="tel:+1913-302-0440" class="button" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</a></li>
-    <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="button"><img src="Icons/LinkedIn.svg">&nbsp;LinkedIn</a></li>
-  </ul></div>
-
 
   <script>
     function copyEmail() {
         navigator.clipboard.writeText
-            ("me@caleb-lyons.com");
+            ("C@caleb-lyons.com");
     }
     function copyPhone() {
         navigator.clipboard.writeText
             ("913 302 0440");
     }
   </script>
+
+
+<!--
+
+
+  <div class="menu" id="downloads" popover><ul>
+    <li><a href="Downloads/CalebL_Resume.pdf" class="button download" download><img src="Icons/resume.svg">&nbsp;&nbsp;My Resume</a></li>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" class="button download" download><img src="Icons/screen.svg">&nbsp;&nbsp;Digital Portfolio PDF</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper Portfolio PDF</a></li>
+  </ul></div>
+  
+  <div class="menu" id="exports" popover><ul>
+    <li><a href="Downloads/CalebL_Portfolio.pdf" class="button download" download><img src="Icons/screen.svg">&nbsp;&nbsp;Digital Presentation ( 4K )</a></li>
+    <li><a href="Downloads/CalebLyons_Portfolio.pdf" class="button download" download><img src="Icons/letter.svg">&nbsp;&nbsp;Letter Paper ( 8.5x11 in )</a></li>
+  </ul></div>
+  
+    <div class="menu" id="contactsmobile" popover><ul>
+      <li><button class="copy" onclick="copyEmail()"><img src="Icons/mail.svg">&nbsp;&nbsp;C@caleb-lyons.com</button></li>
+      <li><button class="copy" onclick="copyPhone()"><img src="Icons/phone.svg">&nbsp;&nbsp;913-302-0440</button></li>
+      <li><a href="https://www.linkedin.com/in/caleb-mi-lyons/" target="_blank" class="external button"><img src="Icons/LinkedIn.svg">&nbsp;LinkedIn</a></li>
+    </ul></div>
+  
+  -->
 
 
   <main>
