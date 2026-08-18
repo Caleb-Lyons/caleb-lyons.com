@@ -133,8 +133,8 @@ main {
                 display: flex;
                 flex-direction: row;
                 padding: 0.75rem 1rem;
-                margin: 0;
-                align-self: end;
+                margin: auto 0 0 0;
+                align-self: flex-end;
                 transition: 200ms ease-in-out;
                 height: fit-content;
 
@@ -1637,11 +1637,16 @@ html:has(#box), body:has(#box) {
     }
 
     .ResponsiveDesign > div > div {
-            height: 50%;
-            width: unset;
-            max-width: unset;
-            aspect-ratio: 16 / 9;
-            overflow: visible;
+        height: 50%;
+        width: unset;
+        max-width: unset;
+        aspect-ratio: 16 / 9;
+        overflow: visible;
+
+        img {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
     }
 
     .HardThumb {
