@@ -145,11 +145,13 @@ main {
                 img {
                     margin-left: auto;
                     width: 1.5rem;
+                    position: relative;
                     height: 1.5rem;
                     rotate: 180deg;
                     filter: invert(1);
                     z-index: -1;
                     z-index: 2;
+                    animation: none;
                 }
             }
         }
@@ -172,16 +174,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background: #1B120E;
     background: linear-gradient(180deg, rgba(27, 18, 14, 1) 35%, rgb(55, 27, 13) 100%);
     position: relative;
-    width: 220px;
-    height: 300px;
     perspective: 1000px;
     width: 100%;
     height: 100%;
-    overflow: visible;
     transition: zoom 200ms ease-in-out;
     overflow: hidden;
 
@@ -193,7 +191,7 @@ main {
         transform-style: preserve-3d;
         overflow: visible;
         max-inline-size: none;
-        zoom: calc(max(33vw, min(45vw, calc(39.75rem - 3vw))) / 420px);
+        zoom: calc(max(33vw, min(45vw, 39.75rem - 3vw)) / 420px);
 
         .side{
             position: absolute;
@@ -243,28 +241,46 @@ main {
 
 }
 
-.hoverbox:hover, .ScrollThumb:hover {
+.hoverbox:hover {
     zoom: 1.02;
 }
 
-.ScrollThumb {
+.HardThumb {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #1B120E;
-    background: linear-gradient(180deg, rgba(27, 18, 14, 1) 35%, rgb(55, 27, 13) 100%);
+    background: gray;
     position: relative;
-    width: 220px;
-    height: 300px;
-    perspective: 1000px;
     width: 100%;
     height: 100%;
-    overflow: visible;
     transition: zoom 200ms ease-in-out;
     overflow: hidden;
+    
+    div:first-child {
+        width: 89.32%;
+        height: 74.37%;
+        animation-name: HardThumb;
+        animation-duration: 3.75s;
+        transition: 200ms ease-in-out;
+
+        img {
+            z-index: unset;
+            object-fit: contain;
+        }
+    }
 }
+
+.HardThumb:hover {
+
+    img {
+        transform: none !important;
+    }
+    div:first-child {
+        transform: scale(1.02);
+    }
+}
+
 
 .button, button {
     font-family: WorkSans, "WorkSans", sans-serif;
@@ -835,128 +851,157 @@ html:has(#box), body:has(#box) {
     }
 }
 
-.ResponsiveDesign {
-    > div > div {
-        width: 100%;
-        max-width: 200vh;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        max-inline-size: none;
-        background-color: #F0F0F0;
-        background: linear-gradient(90deg,rgba(217, 217, 217, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(217, 217, 217, 1) 100%);;
-        align-items: center;
-        margin: 0;
+.ResponsiveDesign > div > div, .HardThumb {
+    width: 100%;
+    max-width: 200vh;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    max-inline-size: none;
+    background-color: #F0F0F0;
+    background: linear-gradient(90deg,rgba(217, 217, 217, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(217, 217, 217, 1) 100%);;
+    align-items: center;
+    margin: 0;
 
-        > div, .ScrollThumb {
-            flex: unset;
-            background-size: cover;
+    > div {
+        flex: unset;
+        background-size: cover;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+        position: relative;
+        
+        animation-timing-function: ease-in;
+        background-color: black;
+
+        >img {
+            width: 100%;
+            height: 100%;
+            max-inline-size: 100%;
+            position: absolute;
+            margin: 0;
+            aspect-ratio: unset;
+            padding: unset;
+            max-width: unset;
+            max-height: unset;
             animation-direction: alternate;
             animation-iteration-count: infinite;
-            overflow: hidden;
-            position: relative;
-            
-            animation-timing-function: ease-in;
-            background-color: black;
-
-            img {
-                width: 100%;
-                height: 100%;
-                max-inline-size: 100%;
-                position: absolute;
-                margin: 0 !important;
-                aspect-ratio: unset;
-                padding: unset;
-                max-width: unset;
-                max-height: unset;
-                animation-direction: alternate;
-                animation-iteration-count: infinite;
-                animation-name: twoofthree;   
-                animation-duration: 3.75s;
-                animation-timing-function: step-start;
-                object-fit: contain;
-            }
-
-            img:last-child {
-                animation-name: oneofthree;          
-            }
-
-            img:first-child {
-                animation-name: threeofthree;           
-            }
-        }
-
-        .hard {
-            animation-name: hard;
+            animation-name: twoofthree;   
             animation-duration: 3.75s;
-            width: 21.36%;
-            height: 75.96%;
+            animation-timing-function: step-start;
+            object-fit: contain;
         }
 
-        .skinny {
-            animation-name: skinny;
-            animation-duration: 3.75s;
-            width: 21.36%;
-            height: 75.96%;
+        img:last-child {
+            animation-name: oneofthree;          
         }
 
-        .wide {
-            animation-name: wide;
+        img:first-child {
+            animation-name: threeofthree;           
+        }
+    }
+
+    .hard {
+        animation-name: hard;
+        animation-duration: 3.75s;
+        width: 21.36%;
+        height: 75.96%;
+    }
+
+    .skinny {
+        animation-name: skinny;
+        animation-duration: 3.75s;
+        width: 21.36%;
+        height: 75.96%;
+    }
+
+    .wide {
+        animation-name: wide;
+        animation-duration: 5s;
+        width: 69.06%;
+        height: 31.57%;
+
+        img:nth-last-child(1) {
+            animation-name: oneoffour;
             animation-duration: 5s;
-            width: 69.06%;
-            height: 31.57%;
-
-            img:nth-last-child(1) {
-                animation-name: oneoffour;
-                animation-duration: 5s;
-            }
-
-            img:nth-last-child(2) {
-                animation-name: twooffour;
-                animation-duration: 5s;
-            }
-
-            img:nth-last-child(3) {
-                animation-name: threeoffour;
-                animation-duration: 5s;
-            }
-
-            img:nth-last-child(4) {
-                animation-name: fouroffour;
-                animation-duration: 5s;
-            }
         }
 
-        .scroll {
-            animation-name: scroll;
+        img:nth-last-child(2) {
+            animation-name: twooffour;
+            animation-duration: 5s;
+        }
+
+        img:nth-last-child(3) {
+            animation-name: threeoffour;
+            animation-duration: 5s;
+        }
+
+        img:nth-last-child(4) {
+            animation-name: fouroffour;
+            animation-duration: 5s;
+        }
+    }
+
+    .scroll {
+        animation-name: scroll;
+        animation-duration: 8.75s;
+        animation-direction: normal;
+        height: 76.44%;
+        width: 22.29%;
+
+        img:nth-last-child(1) {
+            animation-name: scrollone;
             animation-duration: 8.75s;
             animation-direction: normal;
-            height: 76.44%;
-            width: 22.29%;
-
-            img:nth-last-child(1) {
-                animation-name: scrollone;
-                animation-duration: 8.75s;
-                animation-direction: normal;
-                animation-timing-function: ease-out;
-            }
-            img:nth-last-child(2) {
-                animation-name: scrolltwo;
-                animation-duration: 8.75s;
-                animation-direction: normal;
-                animation-timing-function: ease-out;
-                width: 200%;  
-            }
-            img:nth-last-child(3) {
-                animation-name: scrollthree;
-                animation-duration: 8.75s;
-                animation-direction: normal;
-                animation-timing-function: ease-out;
-                width: 200%;                
-            }
+            animation-timing-function: ease-out;
+        }
+        img:nth-last-child(2) {
+            animation-name: scrolltwo;
+            animation-duration: 8.75s;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            width: 200%;  
+        }
+        img:nth-last-child(3) {
+            animation-name: scrollthree;
+            animation-duration: 8.75s;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            width: 200%;                
         }
     }
 }
 
+@keyframes HardThumb {
+    0% {
+        width: 89.32%;
+        height: 74.37%;
+    }
+
+    23% {
+        width: 89.32%;
+        height: 74.37%;
+    }
+    
+    26% {
+        width: 79.81%;
+        height: 66.41%;
+    }
+    
+    73% {
+        width: 79.81%;
+        height: 66.41%;
+    }
+    
+    76% {
+        width: 66.41%;
+        height: 66.41%; 
+    }
+    
+    100% {
+        width: 66.41%;
+        height: 66.41%; 
+    }
+}
 @keyframes hard {
     0% {
         width: 23.96%;
@@ -1597,6 +1642,10 @@ html:has(#box), body:has(#box) {
             max-width: unset;
             aspect-ratio: 16 / 9;
             overflow: visible;
+    }
+
+    .HardThumb {
+        height: 104vw;
     }
 
     #box {
