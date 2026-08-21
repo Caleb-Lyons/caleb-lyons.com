@@ -207,14 +207,14 @@ main {
     
     #front {
         transform: translateZ(60.5px);
-        background-image: url(Images/Copperpot/Mobile_Front.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Front.webp);
         background-color: #CC954E;
     }
 
     #right {
         width: 121px;
         transform: rotateY(90deg) translateZ(181px);
-        background-image: url(Images/Copperpot/Mobile_Right.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Right.webp);
     }
     
     #back {
@@ -224,19 +224,19 @@ main {
     #left {
         width: 121px;
         transform: rotateY(-90deg) translateZ(60.5px);
-        background-image: url(Images/Copperpot/Mobile_Left.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Left.webp);
     }
 
     #top {
         height: 121px;
         transform: rotateX(90deg) translateZ(60.5px);
-        background-image: url(Images/Copperpot/Mobile_Top.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Top.webp);
     }
 
     #bottom {
         height: 121px;
         transform: rotateX(-90deg) translateZ(269.5px);
-        background-image: url(Images/Copperpot/Mobile_Bottom.webp)
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Bottom.webp)
     }
 
 }
@@ -664,8 +664,8 @@ input[type="checkbox"]:checked ~ label {
     width: 100vw;
     height: 101vh;
     background: 
-        url(Images/nois.gif),
-        url(Images/splashpage.webp);
+        url(Images/caleb-lyons.com_nois.gif),
+        url(Images/caleb-lyons.com_splashpage.webp);
     background-repeat: repeat, no-repeat;
     background-color: #131315;
     background-size: 600px, cover;
@@ -747,28 +747,28 @@ input[type="checkbox"]:checked ~ label {
 }
 
 .copy:hover img {
-    content: url(Icons/copy.svg);
+    content: url(Icons/caleb-lyons.com_copy.svg);
 }
 
 .copy:active img {
-    content: url(Icons/copied.svg);
+    content: url(Icons/caleb-lyons.com_copied.svg);
 }
 
 .download:hover img {
-    content: url(Icons/download.svg);
+    content: url(Icons/caleb-lyons.com_download.svg);
 }
 
 .download:active img {
-    content: url(Icons/downloaded.svg);
+    content: url(Icons/caleb-lyons.com_downloaded.svg);
 }
 
 .external:hover img {
-    content: url(Icons/external.svg);
+    content: url(Icons/caleb-lyons.com_external.svg);
 }
 
 .project {
     background-color: #131315;
-    background-image: url(Images/noise.gif);
+    background-image: url(Images/caleb-lyons.com_noise.gif);
     background-repeat: repeat;
     background-size: 600px;
     background-position: center;
@@ -822,22 +822,22 @@ html:has(#box), body:has(#box) {
     }
     
     .front {
-        background-image: url(Images/Copperpot/Front.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Front.webp);
         width: 55dvh;
     }
     
     .right {
-        background-image: url(Images/Copperpot/Right.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Right.webp);
         width: 27.5dvh;
     }
     
     .back {
-        background-image: url(Images/Copperpot/Back.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Back.webp);
         width: 55dvh;
     }
     
     .left {
-        background-image: url(Images/Copperpot/Left.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Left.webp);
         width: 27.5dvh;
     }
     
@@ -1540,17 +1540,17 @@ html:has(#box), body:has(#box) {
     }
     
     img.right {
-        content: url(Icons/down.svg);
+        content: url(Icons/caleb-lyons.com_down.svg);
         height: 1rem;
         width: 1rem;
     }
 
     .copy img {
-        content: url(Icons/copy.svg);
+        content: url(Icons/caleb-lyons.com_copy.svg);
     }
 
     .download img {
-        content: url(Icons/download.svg);
+        content: url(Icons/caleb-lyons.com_download.svg);
     }
 
     .read:has(~ input[type="checkbox"]:checked) .showOnTablet {
@@ -1655,19 +1655,19 @@ html:has(#box), body:has(#box) {
 
     #box {
         .front {
-            background-image: url(Images/Copperpot/Mobile_Front.webp);
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Front.webp);
         }
         
         .right {
-            background-image: url(Images/Copperpot/Mobile_Right.webp);
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Right.webp);
         }
         
         .back {
-            background-image: url(Images/Copperpot/Mobile_Back.webp);
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Back.webp);
         }
         
         .left {
-            background-image: url(Images/Copperpot/Mobile_Left.webp);
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Left.webp);
         }        
 
         div {
