@@ -27,7 +27,6 @@ html {
 }
 
 body {
-    background-color: white;
     margin: calc(100vh + 6rem) 4vw 30vh 4vw;
     font-family: Audrey, "Audrey", sans-serif;
     letter-spacing: 0.25px;
@@ -90,10 +89,13 @@ main {
     margin-left: auto;
     margin-right: auto;
     justify-self: center;
-    view-transition-name: page-content;
 
+    /* idk
+    view-transition-name: page-content;
+    */
+    
     > div {
-        margin: 8rem 0;
+        margin-bottom: 12vw;
 
         > div {
             width: 100%;
@@ -227,7 +229,6 @@ main {
     #right {
         width: 121px;
         transform: rotateY(90deg) translateZ(181px);
-        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Right.webp);
     }
     
     #back {
@@ -237,19 +238,19 @@ main {
     #left {
         width: 121px;
         transform: rotateY(-90deg) translateZ(60.5px);
-        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Left.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_TERRIBLE_Left.webp);
     }
 
     #top {
         height: 121px;
         transform: rotateX(90deg) translateZ(60.5px);
-        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Top.webp);
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_TERRIBLE_Top.webp);
     }
 
     #bottom {
         height: 121px;
         transform: rotateX(-90deg) translateZ(269.5px);
-        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Bottom.webp)
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_TERRIBLE_Bottom.webp)
     }
 
 }
@@ -1611,6 +1612,8 @@ html:has(#box), body:has(#box) {
         top: 0;
         bottom: unset;
         padding: 0 2vw;
+        background-color: black;
+        filter: none;
 
         .button, button {
             padding: 0 0.75rem !important;
