@@ -305,7 +305,7 @@ main {
     width: fit-content;
     max-inline-size: 100%;
     border-radius: 0.313rem;
-    background-color: #1A1A1A;
+    background-color: #000000;
     backdrop-filter: blur(0.625rem);
     padding: 0 1.25rem;
     cursor: pointer;
@@ -314,8 +314,7 @@ main {
     align-content: center;
     color: rgba(255, 255, 255, 0.91);
     gap: 0.25rem;
-    
-    
+    border: none;
 
     img {
         height: 1.4rem;
@@ -333,6 +332,14 @@ main {
     .right {
         margin-left: auto;
     }
+}
+
+button:hover, .button:hover {
+    text-decoration: underline 2.5px #0270CD;
+    
+        img {
+            filter: invert(25%) sepia(80%) saturate(4972%) hue-rotate(195deg) brightness(98%) contrast(98%);
+        }
 }
 
 li {
@@ -393,6 +400,12 @@ label:hover .button {
 
 .read {
     margin-bottom: 0;
+    gap: 5rem;
+
+    >div:first-child {
+        margin: 2rem 0;
+    }
+
     >div {
         /*
         max-height: 65vh;
@@ -402,7 +415,10 @@ label:hover .button {
         color: transparent;
         */
         
-        gap: 0.5rem;
+        >div:first-child {
+            height: calc(100% - 7.5rem);
+            margin-bottom: 2.5rem;
+        }
 
         p:nth-last-child(2) {
             padding-bottom: 1rem;
@@ -418,50 +434,14 @@ label:hover .button {
             padding: 0;
         }
 
-        >div {
+        >div>div {
             gap: 0.5rem;
         }
 
-        div div:has(button), div div:has(.button) {
-            padding: 0.313rem;
-            border-radius: 0.625rem;
-            border: 1.5px rgba(180, 180, 180, 0.125) solid;
-            background: rgba(0, 0, 0, 0.646);
-            backdrop-filter: blur(0.625rem);
+        div div {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: flex-start;
-            width: fit-content;
-            color: black;
-
-
-            .button, button {
-                color: white;
-                box-shadow: unset;
-                border: unset;
-                background-color: unset;
-                backdrop-filter: unset;
-                text-align: center;
-            }
-        }   
-
-        div div .button:hover, div div button:hover {
-            background: rgb(232, 232, 232) !important;
-            color: black;
-            text-decoration: none;
-            box-shadow: none;
-            img {
-                filter: invert(100%);
-            }
-        }
-        div {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        p:nth-child(5) a {
-            color: transparent;
         }
     }
 }
@@ -520,14 +500,6 @@ input[type="checkbox"]:checked ~ label {
             transform: translateY(0px);
             font-size: 0.9rem;
             padding: 0 1rem;
-        }
-
-        .button:hover, button:hover {
-            text-decoration: underline 2.5px #0270CD;
-
-            img {
-                filter: invert(25%) sepia(80%) saturate(4972%) hue-rotate(195deg) brightness(98%) contrast(98%);
-            }
         }
 
         :first-child {
@@ -729,31 +701,13 @@ input[type="checkbox"]:checked ~ label {
             margin: 0;
         }
 
-        a {
-            font-weight: 600;
-            color: #A5D8FF;
-        }
-
-        .button {
-            border: 1.5px rgba(180, 180, 180, 0.125) solid;
-            background-color: rgba(0, 0, 0, 0.646);
-            backdrop-filter: blur(0.625rem);
-            color: white;
-        }
-
-        .button:hover, button:hover {
-            background-color: rgb(232, 232, 232);
-            color: black;
-            text-decoration: none;
-            box-shadow: none;
-            img {
-                filter: invert(100%);
-            }
-        }
-
         .hideOnMobile img, .showOnMobile img {
             width: 30px;
             height: 30px;
+        }
+
+        .button, button {
+            gap: 0.5rem;
         }
 
         div {
@@ -786,6 +740,7 @@ input[type="checkbox"]:checked ~ label {
 .project {
     background-color: #131315;
     margin-top: 3rem;
+    margin-bottom: 6rem;
     overflow-x: hidden;
 
     /*
@@ -1605,7 +1560,7 @@ html:has(#box), body:has(#box) {
     }
 
     .showOnMobile {
-        display: inline;
+        display: flex;
     }
 
     .wrapper {

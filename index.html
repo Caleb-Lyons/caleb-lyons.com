@@ -106,7 +106,7 @@
       <!--
         <p>Welcome to my website. Here, you can access my work, resume, information, and a PDF copy of my portfolio, all from the navigation bar above.</p>
       -->
-        <div><a class="button" href="./#Projects">To Projects&nbsp;<img src="Icons/caleb-lyons.com_scroll.svg"></a><a class="button" href="./#about">To About&nbsp;<img src="Icons/caleb-lyons.com_scroll.svg"></a><!--<a href="Downloads/CalebL_Portfolio.pdf" class="button hideOnMobile"><img src="Icons/caleb-lyons.com_download_large.svg" alt="Download Portfolio"></a>--></div>
+        <div><a class="button" href="./#Projects">To Projects<img src="Icons/caleb-lyons.com_scroll.svg"></a><a class="button" href="./#about">To About<img src="Icons/caleb-lyons.com_scroll.svg"></a><!--<a href="Downloads/CalebL_Portfolio.pdf" class="button hideOnMobile"><img src="Icons/caleb-lyons.com_download_large.svg" alt="Download Portfolio"></a>--></div>
       </div>
 
     </div>
@@ -167,19 +167,25 @@
 
     <div class="read">
       <div>
-        <h2 id="about">This website was designed for you — not me.</h2>
+        <div>
+          <h2 id="about">This website was designed for you — not me.</h2>
         
-        <p>I already know what my work looks like. But you didn’t. Clearing that gap defines this website’s purpose and all that follows: its layout, the way it reads, the hierarchy of elements on a page. That is design.</p>
+          <p>I already know what my work looks like. But you didn’t. Clearing that gap defines this website’s purpose and all that follows: its layout, the way it reads, the hierarchy of elements on a page. That is design.</p>
+        </div>
         <!--
           <h3>Myself</h3>
           <p>I am a graphic designer. I make art but what I make is not for myself. It is the reflection of the consumer, and what they want to see. 
             Instead, what I get out of it is the challenge; I coded this website, for instance. I learned to animate </p>
             -->
-            
-        <h3 style="margin-bottom: 0.75rem;">Contact Me</h3>
         <div>
-        <div class="showOnTablet"><a href="mailto:C@caleb-lyons.com" class="button" onclick="copyEmail()"><img src="Icons/caleb-lyons.com_mail.svg">C@caleb-lyons.com</a></div>
-        <div class="showOnTablet"><a href="tel:+1913-302-0440" class="button" onclick="copyPhone()"><img src="Icons/caleb-lyons.com_phone.svg">913-302-0440</a></div>
+          <h3 style="margin-bottom: 0.75rem;">Contact Me</h3>
+          <div>
+            <button class="copy hideOnMobile" onclick="copyEmail()"><img src="Icons/caleb-lyons.com_mail.svg">C@caleb-lyons.com</button>
+
+            <a class="button showOnMobile" href="mailto:c@caleb-lyons.com"><img src="Icons/caleb-lyons.com_mail.svg">C@caleb-lyons.com</a>
+
+            <button class="copy" onclick="copyPhone()"><img src="Icons/caleb-lyons.com_phone.svg">913-302-0440</button>
+          </div>
         </div>
       </div>
       <div class="hideOnTablet"><img src="Images/caleb-lyons.com_CalebLyons.webp" loading="lazy"></div>
