@@ -93,6 +93,108 @@
   
   -->
 
+  <style>
+
+  html, body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    margin: none;
+  }
+
+  #box {
+    
+    #dragger, #cube, .face {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    div {
+        position: absolute;
+    }
+
+    .face {
+        background-color: #CC954E;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .front {
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Front.webp);
+        width: 55dvh;
+    }
+    
+    .right {
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Right.webp);
+        width: 27.5dvh;
+    }
+    
+    .back {
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Back.webp);
+        width: 55dvh;
+    }
+    
+    .left {
+        background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Left.webp);
+        width: 27.5dvh;
+    }
+    
+    .container {
+        width: 55dvh;
+        height: 75dvh;
+        perspective: 1500px;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }
+  }
+  
+  @media (max-width: 888px) {
+    
+    #box div {
+      flex-direction: initial;
+    }
+    
+    #box .container {
+      zoom: 0.9;
+    }
+  }
+
+  @media (max-width: 605px) {
+    #box {
+      overflow-x: hidden;
+
+      .container {
+        zoom: 0.65;
+      }
+
+        .front {
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Front.webp);
+        }
+        
+        .right {
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Right.webp);
+        }
+        
+        .back {
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Back.webp);
+        }
+        
+        .left {
+            background-image: url(Images/Copperpot/caleb-lyons.com_PackagingDesign_Mobile_Left.webp);
+        }        
+
+        div {
+            margin: 0;
+            overflow-x: visible;
+        }
+    }
+  }
+
+  </style>
+
    <main id="box">
 
      <div class="container" >

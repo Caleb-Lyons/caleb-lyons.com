@@ -185,4 +185,176 @@
 
   </main>
 </body>
+
+<style>
+
+  body {
+    padding: 2vw !important;
+    margin: none !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    width: 100%;
+    height: 100vh !important;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+
+    main {
+        max-width: none !important;
+
+        #next-btn, #prev-btn {
+            position: absolute;
+            position-anchor: --book;
+            position-area: center;
+            padding: 0;
+            margin: 0;
+            width: 2rem;
+            height: 2rem;
+            max-inline-size: none;
+            z-index: 999;
+            transition: 0.073s;
+            backdrop-filter: none !important;
+            background-color: unset !important;
+
+            
+            img {
+                width: 2rem;
+                height: 2rem;
+                max-width: none;
+            }
+        }
+
+        #prev-btn {
+          translate: calc(-46vw + 1rem);
+
+        }
+      
+        #next-btn {
+          translate: calc(46vw - 1rem);
+          rotate: 180deg;
+        }
+        
+        #next-btn:hover, #prev-btn:hover {
+            transform: scale(1.1);
+            img {
+              filter: none !important;
+            }
+        }
+        
+        #next-btn:active, #prev-btn:active {
+            transform: scale(1.05);
+        }
+
+        #book {
+            aspect-ratio: 2.828 / 1;
+            anchor-name: --book;
+            align-items: flex-end;
+            
+        
+            .paper {
+                margin: 0;
+                padding: 0;
+                gap: 0;
+                width: 48vw;
+                aspect-ratio: 1.414 / 1;
+                position: absolute;
+
+
+                    img {
+                    position: absolute;
+                    transform-origin: left;
+                    aspect-ratio: 1.414 / 1;
+                    transition: transform 0.3s;
+                    border-radius: 0;
+                    }
+                    img:last-child {
+                        z-index: -1;
+                    }
+                }
+            
+                #g00 {
+                    z-index: 18;
+                }
+                #g01 {
+                    z-index: 17;
+                }
+                #g02 {
+                    z-index: 16;
+                }
+                #g03 {
+                    z-index: 15;
+                }
+                #g04 {
+                    z-index: 14;
+                }
+                #g05 {
+                    z-index: 13;
+                }
+                #g06 {
+                    z-index: 12;
+                }
+                #g07 {
+                    z-index: 11;
+                }
+                #g08 {
+                    z-index: 10;
+                }
+                #g09 {
+                    z-index: 9;
+                }
+                #g10 {
+                    z-index: 8;
+                }
+                #g11 {
+                    z-index: 7;
+                }
+                #g12 {
+                    z-index: 6;
+                }
+                #g13 {
+                    z-index: 5;
+                }
+                #g14 {
+                    z-index: 4;
+                }
+                #g15 {
+                    z-index: 3;
+                }
+                #g16 {
+                    z-index: 2;
+                }
+                #g17 {
+                    z-index: 1;
+                }
+        }
+
+        .flipped>:first-child, .flipped>:last-child {
+            transform: rotateY(-180deg);
+        }
+
+        img:first-child {
+            backface-visibility: hidden;
+        }
+    }
+  }
+
+  @media (max-width: 605px) {
+
+    main {
+      height: 67.872vw !important;
+      margin-bottom: 0 !important;
+      overflow-y: hidden;
+    }
+
+    #book img {
+      width: 96vw;
+      translate: 22.5%;
+    }
+
+  }
+
+</style>
+
 </html>

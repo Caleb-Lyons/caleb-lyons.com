@@ -89,6 +89,385 @@
   
   -->
 
+  <style>
+
+    .ResponsiveDesign > div > div {
+      .skinny {
+          animation-name: skinny;
+          animation-duration: 3.75s;
+          width: 21.36%;
+          height: 75.96%;
+      }
+
+      .hard {
+        animation-name: hard;
+        animation-duration: 3.75s;
+        width: 21.36%;
+        height: 75.96%;
+      }
+
+      .wide {
+          animation-name: wide;
+          animation-duration: 5s;
+          width: 69.06%;
+          height: 31.57%;
+
+          img:nth-last-child(1) {
+              animation-name: oneoffour;
+              animation-duration: 5s;
+          }
+
+          img:nth-last-child(2) {
+              animation-name: twooffour;
+              animation-duration: 5s;
+          }
+
+          img:nth-last-child(3) {
+              animation-name: threeoffour;
+              animation-duration: 5s;
+          }
+
+          img:nth-last-child(4) {
+              animation-name: fouroffour;
+              animation-duration: 5s;
+          }
+      }
+
+      .scroll {
+          animation-name: scroll;
+          animation-duration: 8.75s;
+          animation-direction: normal;
+          height: 76.44%;
+          width: 22.29%;
+
+          img:nth-last-child(1) {
+              animation-name: scrollone;
+              animation-duration: 8.75s;
+              animation-direction: normal;
+              animation-timing-function: ease-out;
+          }
+          img:nth-last-child(2) {
+              animation-name: scrolltwo;
+              animation-duration: 8.75s;
+              animation-direction: normal;
+              animation-timing-function: ease-out;
+              width: 200%;  
+          }
+          img:nth-last-child(3) {
+              animation-name: scrollthree;
+              animation-duration: 8.75s;
+              animation-direction: normal;
+              animation-timing-function: ease-out;
+              width: 200%;                
+          }
+      }
+    }
+
+    @keyframes hard {
+    0% {
+        width: 23.96%;
+        height: 35.46%;   
+    }
+
+    23% {
+        width: 23.96%;
+        height: 35.46%;  
+    }
+    
+    26% {
+        width: 21.41%;
+        height: 31.67%;
+    }
+    
+    73% {
+        width: 21.41%;
+        height: 31.67%;
+    }
+    
+    76% {
+        width: 17.81%;
+        height: 31.67%;   
+    }
+    
+    100% {
+        width: 17.81%;
+        height: 31.67%;
+    }
+  }
+
+  @keyframes skinny {
+      0% {
+          width: 21.36%;   
+      }
+
+      23% {
+          width: 21.36%; 
+      }
+      
+      26% {
+          width: 11.35%;
+      }
+      
+      73% {
+          width: 11.35%;    
+      }
+      
+      76% {
+          width: 9.11%;       
+      }
+      
+      100% {
+          width: 9.11%;      
+      }
+    }
+
+  @keyframes wide {
+    0% {
+        width: 69.11%;
+        height: 31.67%;
+    }
+    15% {
+        width: 69.11%;
+        height: 31.67%;
+    }
+    17% {
+        width: 51.84%;
+        height: 11.40%;
+    }
+    49% {
+        width: 51.84%;
+        height: 11.40%;
+    }
+    51% {
+        width: 22.79%;
+        height: 12.66%;
+    }
+    82% {
+        width: 22.79%;
+        height: 12.66%;
+    }
+    84% {
+        width: 22.79%;
+        height: 6.38888888%;
+    }
+    100% {
+        width: 22.79%;
+        height: 6.38888888%;
+    }
+}
+
+  @keyframes oneoffour {
+    0% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+  @keyframes twooffour {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 0;
+    }
+    17% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+  @keyframes threeoffour {
+    0% {
+        opacity: 0;
+    }
+    
+    49% {
+        opacity: 0;
+    }
+    51% {
+        opacity: 1;
+    }
+    82% {
+        opacity: 1;
+    }
+    84% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+  @keyframes fouroffour {
+    0% {
+        opacity: 0;
+    }
+    
+    82% {
+        opacity: 0;
+    }
+    84% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+  @keyframes scroll {
+    0% {
+        height: 76.44%;
+        width: 22.29%;
+    }
+    7% {
+        height: 76.44%;
+        width: 22.29%;
+    }
+    8% {
+        height: 49.53%;
+        width: 22.29%;
+    }
+    24% {
+        height: 49.53%;
+        width: 22.29%;
+    }
+    28% {
+        height: 49.53%;
+        width: 22.29%;
+    }
+    41% {
+        height: 49.53%;
+        width: 22.29%;
+    }
+    42% {
+        height: 39.62%;
+        width: 22.29%;
+    }
+    57% {
+        height: 39.62%;
+        width: 22.29%;
+    }
+    58% {
+        height: 39.62%;
+        width: 22.29%;
+    }
+    74% {
+        height: 39.62%;
+        width: 22.29%;
+    }
+    75% {
+        height: 49.53%;
+        width: 22.29%;
+    }
+    91% {
+        height: 49.53%;
+        width: 22.29%;
+    }  
+    92% {
+        height: 76.44%;
+        width: 22.29%;
+    }  
+    100% {
+        height: 76.44%;
+        width: 22.29%;
+    }  
+  }
+
+  @keyframes scrollone {
+    0% {
+        display: flex;
+    }
+    7% {
+        display: none;
+    }
+    8% {
+        display: none;
+    }
+    
+    91% {
+        display: none;
+    }  
+    92% {
+        display: none;
+    }  
+    100% {
+        display: flex;
+    }  
+  }
+
+  @keyframes scrolltwo {
+
+    22% {
+        display: flex;
+        translate: 0%;
+    }
+    26% {
+        translate: -50%;
+    }
+    41% {
+        display: none;
+    }
+    42% {
+        display: none;
+        translate: -50%;
+    }
+
+    74% {
+        display: none;
+        translate: 0%;
+    }
+    75% {
+        display: none;
+    }
+    91% {
+        display: flex;
+    }  
+    92% {
+        display: none;
+    }  
+    100% {
+        display: none;
+    }  
+  }
+
+  @keyframes scrollthree {
+    0% {
+        translate: -50%;
+    }
+    55% {
+        translate: -50%;
+    }
+    60% {
+        translate: 0%;
+    }
+    74% {
+        display: flex;
+    }
+    75% {
+        display: none;
+    }
+
+    100% {
+        display: none;
+    }  
+  }
+
+  </style>
 
   <main class="ResponsiveDesign">
 
